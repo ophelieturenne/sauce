@@ -9,8 +9,8 @@
 require "open-uri"
 
 puts "starting seeding"
+puts "cleaning database" 
 
-puts "cleaning database"
 Emergency.destroy_all
 
 puts "creating categories"
@@ -18,3 +18,4 @@ emergency1 = Emergency.create(name: "police", description: "Lorem ipsum dolor si
 
 puts "saving file"
 emergency1.save
+
