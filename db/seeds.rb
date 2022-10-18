@@ -15,7 +15,8 @@ Emergency.destroy_all
 Aid.destroy_all
 User.destroy_all
 
-puts "creating materials for emergencies"
+
+puts "creating aids"
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087132/sauce/Asthma_e1j8tj.png")
 aid = Aid.new(name: "Asthma", description: " description ")
@@ -67,14 +68,16 @@ aid9 = Aid.new(name: "Food Poisoning", description: " description 9 ")
 aid9.photo.attach(io: file, filename: "food_poisoning.webp", content_type: "image/webp")
 aid9.save
 
-puts "creating materials for emergencies"
+puts "creating emergencies"
 emergency1 = Emergency.create(name: "police", description: "Lorem ipsum dolor sit amet consectetur!")
 
 puts "save emergencies"
 emergency1.save
+
 
 puts "creating steps"
 step1 = Step.create(aid_id: 11, position: 1, description: "Lorem ipsum dolor sit amet consectetur!")
 
 puts "saving steps file "
 step1.save
+
