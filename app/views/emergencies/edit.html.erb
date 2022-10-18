@@ -8,3 +8,4 @@
       <% end %>
     </div>
 </div>
+<%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this booking"}, class: 'links' %>
