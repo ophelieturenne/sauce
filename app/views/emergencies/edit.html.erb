@@ -1,0 +1,10 @@
+<h2>Edit</h2>
+
+    <div class="book bg-white shadow" >
+      <%= simple_form_for ([@emergency]) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+      <%= f.submit class: 'btn', style: 'background-color:#28CCED;color:white' %>
+      <% end %>
+    </div>
+</div>

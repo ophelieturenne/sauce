@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'steps/index'
 
   # get 'aids/index'
   # get 'aids/show'
@@ -11,6 +12,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :emergencies, only: [:index, :show, :create, :edit, :destroy]
+  resources :emergencies, only: [:index, :show, :new, :create, :edit, :destroy]
   resources :aids, only: [:index, :show]
 end

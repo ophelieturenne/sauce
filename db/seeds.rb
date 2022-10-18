@@ -9,7 +9,6 @@
 require "open-uri"
 
 puts "starting seeding"
-
 puts "cleaning database"
 
 Emergency.destroy_all
@@ -69,9 +68,16 @@ aid9 = Aid.new(name: "Food Poisoning", description: " description 9 ")
 aid9.photo.attach(io: file, filename: "food_poisoning.webp", content_type: "image/webp")
 aid9.save
 
-
 puts "creating emergencies"
 emergency1 = Emergency.create(name: "police", description: "Lorem ipsum dolor sit amet consectetur!")
 
 puts "save emergencies"
 emergency1.save
+
+
+puts "creating steps"
+step1 = Step.create(aid_id: 11, position: 1, description: "Lorem ipsum dolor sit amet consectetur!")
+
+puts "saving steps file "
+step1.save
+
