@@ -9,13 +9,27 @@
 require "open-uri"
 
 puts "starting seeding"
-puts "cleaning database" 
+puts "cleaning database"
 
 Emergency.destroy_all
+Aid.destroy_all
 
-puts "creating categories"
+# //...........CREATE........................//
+puts "creating emergencies categories"
 emergency1 = Emergency.create(name: "police", description: "Lorem ipsum dolor sit amet consectetur!")
 
-puts "saving file"
+puts "creating first-aids categories"
+aid1 = Aid.create(name: "burns", description: "Lorem ipsum dolor sit amet consectetur!")
+puts "saving first-aid file "
+aid1.save
+
+puts "creating steps"
+step1 = Step.create(aid_id: 11, position: 1, description: "Lorem ipsum dolor sit amet consectetur!")
+
+# //............SAVE........................//
+puts "saving emergency file"
 emergency1.save
 
+
+puts "saving steps file "
+step1.save
