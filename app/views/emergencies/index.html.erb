@@ -1,8 +1,8 @@
 <h1>Emergencies#index</h1>
-<p>Find me in app/views/emergencies/index.html.erb</p>
+
 <% @emergencies.each do |emergency| %>
-<%= emergency.name %>
-<br>
-<%= emergency.description %>
-<br><br>
+  <%= emergency.name %>
+  <%= emergency.description %>
+  <%= link_to "Edit",  edit_emergency_path(emergency) %>
+  <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this booking"} %>
 <% end %>
