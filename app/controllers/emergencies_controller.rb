@@ -35,6 +35,12 @@ class EmergenciesController < ApplicationController
     end
   end
 
+  def destroy
+    @emergency = Emergency.find(params[:id])
+    @emergency.destroy
+    redirect_to emergencies_path, status: :see_other
+  end
+
   private
   def emergency_params
     params.require(:emergency).permit(:name, :description)
