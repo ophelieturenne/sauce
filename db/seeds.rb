@@ -71,7 +71,7 @@ aid9.save
 
 
 puts "creating materials for emergencies"
-emergency1 = Emergency.create(name: "police", description: "lorem ipsum")
+emergency1 = Emergency.create(name: "police", description: "Lorem ipsum dolor sit amet consectetur!")
 
 puts "save emergencies"
 emergency1.save
