@@ -4,7 +4,7 @@ class EmergenciesController < ApplicationController
   end
 
   def show
-
+    @emergency = Emergency.find(params[:id])
   end
 
   def new
@@ -22,6 +22,18 @@ class EmergenciesController < ApplicationController
 
   end
 
+  def edit
+    @emergency = Emergency.find(params[:id])
+  end
+
+  def update
+    @emergency = Emergency.find(params[:id])
+    if @emergency.update(emergency_params)
+      redirect_to emergencies_path, notice: "list was successfully updated."
+    else
+      render :edit
+    end
+  end
 
   private
   def emergency_params
