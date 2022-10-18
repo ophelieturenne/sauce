@@ -68,8 +68,12 @@ aid9 = Aid.new(name: "Food Poisoning", description: " description 9 ")
 aid9.photo.attach(io: file, filename: "food_poisoning.webp", content_type: "image/webp")
 aid9.save
 
+puts "creating users"
+user1 = User.new(email: "john@gmail.com", password: "123456")
+user1.save
+
 puts "creating emergencies"
-emergency1 = Emergency.create(name: "police", description: "Lorem ipsum dolor sit amet consectetur!")
+emergency1 = Emergency.create(name: "police", description: "Lorem ipsum dolor sit amet consectetur!", user: user1)
 
 puts "save emergencies"
 emergency1.save

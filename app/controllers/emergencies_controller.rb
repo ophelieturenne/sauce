@@ -13,7 +13,7 @@ class EmergenciesController < ApplicationController
 
   def create
     @emergency = Emergency.new(emergency_params)
-    # @emergency.user = current_user
+    @emergency.user = current_user
     if @emergency.save
       redirect_to emergencies_path
     else
