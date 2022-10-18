@@ -14,7 +14,7 @@ puts "cleaning database"
 Emergency.destroy_all
 Aid.destroy_all
 User.destroy_all
-
+Step.destroy_all
 
 puts "creating aids"
 
@@ -80,4 +80,3 @@ step1 = Step.create(aid_id: 11, position: 1, description: "Lorem ipsum dolor sit
 
 puts "saving steps file "
 step1.save
-
