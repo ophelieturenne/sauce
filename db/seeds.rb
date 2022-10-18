@@ -6,3 +6,16 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+require "open-uri"
+
+puts "starting seeding"
+puts "cleaning database" 
+
+Emergency.destroy_all
+
+puts "creating categories"
+emergency1 = Emergency.create(name: "police", description: "Lorem ipsum dolor sit amet consectetur!")
+
+puts "saving file"
+emergency1.save
+
