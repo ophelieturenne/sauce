@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'steps/index'
 
   # get 'aids/index'
   # get 'aids/show'
