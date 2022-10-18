@@ -1,5 +1,6 @@
 <h1>My first-aid guide</h1>
-<% @aids.each do |aid| %>>
+<% @aids.each do |aid| %>
  <%= aid.name %>
+ <%= cl_image_tag aid.photo.key, height: 500, width: 400, :crop => "fit" %>
  <% end %>
 <p>Find me in app/views/aids/index.html.erb</p>
