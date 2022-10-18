@@ -6,6 +6,7 @@ class AidsController < ApplicationController
   end
 
   def show
-    @steps = Step.all
+    @aid = Aid.find(params[:id])
+    @steps = Step.where(aid: @aid)
   end
 end

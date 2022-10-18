@@ -11,10 +11,10 @@ require "open-uri"
 puts "starting seeding"
 puts "cleaning database"
 
-Emergency.destroy_all
+Step.destroy_all
 Aid.destroy_all
 User.destroy_all
-Step.destroy_all
+Emergency.destroy_all
 
 puts "creating aids"
 
@@ -80,7 +80,10 @@ emergency1.save
 
 
 puts "creating steps"
-step1 = Step.create(aid_id: 11, position: 1, description: "Lorem ipsum dolor sit amet consectetur!")
+step1 = Step.create(aid: aid, position: 1, description: "Lorem ipsum dolor sit amet consectetur!")
+step2 = Step.create(aid: aid1, position: 1, description: "Lorem ipsum ")
+
 
 puts "saving steps file "
 step1.save
+step2.save
