@@ -80,8 +80,12 @@ emergency1.save
 
 
 puts "creating steps"
+# steps for aid (asthma)
 step1 = Step.create(aid: aid, position: 1, description: "Lorem ipsum dolor sit amet consectetur!")
-step2 = Step.create(aid: aid1, position: 1, description: "Lorem ipsum ")
+
+# steps for aid1 (bleeding)
+step2 = Step.create(aid: aid1, position: 1, description: "Lorem ipsum 1")
+step2 = Step.create(aid: aid1, position: 2, description: "Lorem ipsum 2 ")
 
 
 puts "saving steps file "
