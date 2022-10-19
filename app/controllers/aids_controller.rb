@@ -3,6 +3,12 @@ class AidsController < ApplicationController
 
   def index
     @aids = Aid.all
+
+    if params[:query].present?
+      @aids = Aid.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @aids = Aid.all
+    end
   end
 
   def show
