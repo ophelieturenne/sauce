@@ -1,5 +1,15 @@
 <h1>My Emergency numbers</h1>
 
+<%# search_bar %>
+<%= form_with url: emergencies_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find your emergency number..."
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+
 <% @emergencies.each do |emergency| %>
   <%= emergency.name %>
   <%= emergency.description %>
