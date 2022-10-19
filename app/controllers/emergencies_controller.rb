@@ -1,6 +1,14 @@
 class EmergenciesController < ApplicationController
   def index
+
     @emergencies = policy_scope(Emergency)
+
+    if params[:query].present?
+      @emergencies = Emergency.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @emergencies = Emergency.all
+    end
+
   end
 
   def show
