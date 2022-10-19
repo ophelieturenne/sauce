@@ -1,5 +1,11 @@
 <h2><%= @aid.name%></h2>
-    <% @steps.each do |step| %>
-      <h5><strong>Position:</strong>  <%= step.position %></h5>
-      <h5><strong>Description:</strong> <%= step.description %></h5>
-    <% end %>
+
+<% @steps.each do |step| %>
+  <% if step.photo.key %>
+    <%= cl_image_tag step.photo.key, height: 500, width: 400, :crop => "fit" %>
+  <% else %>
+    <h3>No picture found</h3>
+  <% end %>
+  <h5><strong>STEP:</strong>  <%= step.position %></h5>
+  <h5><strong>Description:</strong> <%= step.description %></h5>
+<% end %>
