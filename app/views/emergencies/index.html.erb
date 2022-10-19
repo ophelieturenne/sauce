@@ -13,9 +13,13 @@
 <% @emergencies.each do |emergency| %>
   <%= emergency.name %>
   <%= emergency.description %>
+
+
   <%= link_to "Edit",  edit_emergency_path(emergency) %>
-  <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this booking"} %>
+  <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this booking"} %>
+
 <% end %>
 <br>
+
 
 <%= link_to "create", new_emergency_path %>
