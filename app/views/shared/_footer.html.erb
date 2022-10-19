@@ -1,29 +1,46 @@
 <div class="footer">
 <ul>
-</ul>
-  <li class="footer-links">
-    <a href="/"><i class="fa-solid fa-house"></i>
-    <span class ="icon"></span>
+  <li class="footer-links active">
+    <a href="/">
+    <span class ="icon">
+    <i class="fa-solid fa-house"></i>
+    </span>
     <span class ="text">Home</span>
     </a>
 
-      <li class="footer-links">
-    <a href="/"><i class="fa-solid fa-phone"></i>
-    <span class ="icon"></span>
+      <li class="footer-links active">
+    <a href="/">
+    <span class ="icon"><i class="fa-solid fa-phone"></i>
+    </span>
     <span class ="text">Emergencies</span>
     </a>
 
-      <li class="footer-links">
-    <a href="/"><i class="fa-solid fa-briefcase-medical"></i>
-    <span class ="icon"></span>
+      <li class="footer-links active">
+    <a href="/">
+    <span class ="icon"><i class="fa-solid fa-briefcase-medical"></i>
+    </span>
     <span class ="text">First-aids</span>
     </a>
 
-      <li class="footer-links">
-    <a href="/"><i class="fa-solid fa-solid fa-location-dot"></i>
-    <span class ="icon"></span>
+      <li class="footer-links active">
+    <a href="/">
+    <span class ="icon"><i class="fa-solid fa-solid fa-location-dot"></i>
+    </span>
     <span class ="text">Map</span>
     </a>
+    <div class=indicator></div>
+</ul>
 
   </li>
 </div>
+
+<script>
+const list = document.querySelectorAll('.list');
+function activeLink(){
+  list.forEach((item) =>
+  item.classList.remove('active'));
+  this.classList.add('active');
+}
+list,forEach((item) =>
+item>addEventListener('click',activeLink))
+</script>
