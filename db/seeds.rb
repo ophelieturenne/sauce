@@ -82,7 +82,7 @@ emergency1.save
 puts "creating steps"
 # steps for aid (asthma)
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666163143/sauce/Asthma/Screenshot_122_rmp6lk.png")
-step1 = Step.new(aid: aid, position: 1, description: "sit the person upright")
+step1 = Step.new(aid: aid, position: 1, description: "sit the person upright.")
 step1.photo.attach(io: file, filename: "asthma", content_type: "image/png")
 step1.save
 
@@ -92,7 +92,7 @@ step2 = Step.new(aid: aid, position: 2, description: "Give 4 separate puffs of b
 – Put 1 puff into spacer
 – Take 4 breaths from spacer
 Repeat until 4 puffs have been taken
-Remember: shake, 1 puff, 4 breaths")
+Remember: shake, 1 puff, 4 breaths.")
 step2.photo.attach(io: file, filename: "asthma", content_type: "image/png")
 step2.save
 
@@ -103,17 +103,94 @@ separate puffs of blue/grey reliever as above ")
 step3.photo.attach(io: file, filename: "asthma", content_type: "image/png")
 step3.save
 
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666163864/sauce/Asthma/Screenshot_122_maxw2h.png")
 step4 = Step.new(aid: aid, position: 4, description: "If there is still no improvement dial
 Triple Zero (000) for an ambulance
 Keep giving 4 separate puffs every 4 minutes
-until emergency assistance arrives ")
+until emergency assistance arrives. ")
+step4.photo.attach(io: file, filename: "asthma", content_type: "image/png")
+step4.save
 
 # steps for aid1 (bleeding)
-step1 = Step.create(aid: aid1, position: 1, description: "Lorem ipsum 1")
-step2 = Step.create(aid: aid1, position: 2, description: "Lorem ipsum 2 ")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666174764/sauce/Bleeding/step1-severe-bleeding-first-aid-advice_kwo4s6.png")
+step1 = Step.new(aid: aid1, position: 1, description: "With open wounds, there’s a risk of infection, so wear protective first aid gloves (if available) to help prevent any infection passing between you both.")
+step1.photo.attach(io: file, filename: "bleeding", content_type: "image/png")
+step1.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666174770/sauce/Bleeding/step-2-severe-bleeding-first-aid-advice_aebs98.png")
+step2 = Step.new(aid: aid1, position: 2, description: "Apply direct pressure to the wound using a sterile dressing if possible or a clean non-fluffy cloth, to stop the bleeding.
+
+If you don't have a dressing you can ask the casualty to do this themselves.
+If the wound is covered by the casualty's clothing, remove or cut the clothes to uncover the wound.
+If there’s an object in the wound, don’t pull it out. It may be acting as a plug to reduce the bleeding. Instead apply pressure on either side of the object to push the edges together.")
+step2.photo.attach(io: file, filename: "bleeding", content_type: "image/png")
+step2.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666174778/sauce/Bleeding/call-for-help-female-first-aid_thkntw.png")
+step3 = Step.new(aid: aid1, position: 3, description: "Ask a helper to call 999 or 112 for emergency help and give Ambulance Control details of where the wound is and the extent of the bleeding.
+
+If you are on your own, use the hands-free speaker on a phone so that you can treat while speaking to ambulance control.")
+step3.photo.attach(io: file, filename: "bleeding", content_type: "image/png")
+step3.save
+
+# steps for aid2 (burns)
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666172339/sauce/Burning/Burns-and-scalds-what-to-do-PIP-4_jnidsj.jpg")
+step1 = Step.new(aid: aid2, position: 1, description: "Treat the burn under cool running water for 20 minutes. If your child is upset or too cold, cool the burn for a few minutes at a time over the next three hours.")
+step1.photo.attach(io: file, filename: "burns", content_type: "image/jpg")
+step1.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666172364/sauce/Burning/Burns-and-scalds-PIP-5_rfv9yl.gif")
+step2 = Step.new(aid: aid2, position: 2, description: "Cool the burn, not the child. Stop cooling the burn after 20 minutes. Keep your child warm because hypothermia can happen quickly in children.")
+step2.photo.attach(io: file, filename: "burns", content_type: "image/gif")
+step2.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666172371/sauce/Burning/Burns-and-scalds-PIP-6_qzjibi.gif")
+step3 = Step.new(aid: aid2, position: 3, description: "Cover the burn with a loose, light, non-sticky dressing like plastic wrap or a plastic zip lock bag. Raise burned limbs to reduce swelling and pain.")
+step3.photo.attach(io: file, filename: "burns", content_type: "image/gif")
+step3.save
+
+# steps for aid3 (drowning)
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666180847/sauce/Drowning/drowning-object_kb2ynr.jpg")
+step1 = Step.new(aid: aid3, position: 1, description: "Try to catch any objects to pull out the persons out of water.")
+step1.photo.attach(io: file, filename: "drowning", content_type: "image/gif")
+step1.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666181211/sauce/Drowning/drowningwater_oh53tq.jpg")
+step2 = Step.new(aid: aid3, position: 2, description: "Make the person lay down and push on his chest to make the water out of his body so that he/she can breath.")
+step2.photo.attach(io: file, filename: "drowning", content_type: "image/jpg")
+step2.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666181882/sauce/Drowning/first-aid-to-drowned-person-man-doing-mouth-vector-32269290_qbguxn.jpg")
+step3 = Step.new(aid: aid3, position: 3, description: "Make a mouth to mouth so that the person can be able to breath properly and avoid suffocating.")
+step3.photo.attach(io: file, filename: "drowning", content_type: "image/jpg")
+step3.save
+
+# steps for aid4 (electric shock)
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666182571/sauce/Electric_shock/First-Aid-Treatment-For-Electric-Shock_xm62la.jpg")
+step1 = Step.new(aid: aid4, position: 1, description: "Take an object like wood (not metal) to push away the electric wire to avoid electricity.")
+step1.photo.attach(io: file, filename: "electric-shock", content_type: "image/jpg")
+step1.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666182824/sauce/Electric_shock/electric_shock_xulruk.jpg")
+step2 = Step.new(aid: aid4, position: 1, description: "Check the person pulse and if neccessary push on the chest to make him breath.")
+step2.photo.attach(io: file, filename: "electric_shock", content_type: "image/jpg")
+step2.save
+
+# steps for aid5 (fracture)
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666179714/sauce/Fracture/fracture_zajppt.jpg")
+step1 = Step.new(aid: aid5, position: 1, description: "Stay still and don't move the broken bones.")
+step1.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
+step1.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666179718/sauce/Fracture/fracture-ice-pack_zbfo96.jpg")
+step2 = Step.new(aid: aid5, position: 2, description: "Once the broken bone is immobilized, apply something cold (preferably ice) to it as soon as you can while you wait for the ambulance.Cold therapy has many benefits, including numbing the pain, reducing inflammation / swelling and reducing bleeding by causing the arteries to constrict.If you don't have ice handy, consider using frozen gel packs or bags of vegetables, but make sure to wrap anything cold in a thin cloth in order to avoid ice burn or frostbite.Apply ice for about 20 minutes or until the area is completely numb before removing it. Compressing it against the injury may help reduce swelling even more as long as it doesn't increase the pain.")
+step2.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
+step2.save
 
 
 puts "saving steps file "
 step1.save
 step2.save
 step3.save
+step4.save
