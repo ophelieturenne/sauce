@@ -4,7 +4,8 @@ class EmergenciesController < ApplicationController
 
     # @category = Category.find(params[:id])
     if params[:query].present?
-      @emergencies = Emergency.where(name: params[:query])
+      # @emergencies = Emergency.where(name: params[:query])
+      @emergencies = Emergency.where("name ILIKE ?", "%#{params[:query]}%")
       # @emergencies = Emergency.where(category: @category).where("name ILIKE ?", "%#{params[:query]}%")
       # Preventing SQL Injection and Database error for
       # unknown characters
