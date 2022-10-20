@@ -1,11 +1,18 @@
-<h2><%= @aid.name%></h2>
-
-<% @steps.each do |step| %>
-  <% if step.photo.key %>
-    <%= cl_image_tag step.photo.key, height: 500, width: 400, :crop => "fit" %>
-  <% else %>
-    <h3>No picture found</h3>
-  <% end %>
-  <h5><strong>STEP:</strong>  <%= step.position %></h5>
-  <h5><strong>Description:</strong> <%= step.description %></h5>
-<% end %>
+<h1><%= @aid.name%></h1>
+<div class="container">
+  <div class="cards">
+    <div class="card-objects">
+      <% @steps.each do |step| %>
+      <div class="card">
+        <% if step.photo.key %>
+         <%= cl_image_tag step.photo.key, height: 500, width: 400, :crop => "fit" %>
+        <% else %>
+         <h3>No picture found</h3>
+        <% end %>
+          <h5><strong>STEP:</strong>  <%= step.position %></h5>
+         <h5><strong>Description:</strong> <%= step.description %></h5>
+      </div>
+    </div>
+      <% end %>
+  </div>
+</div>
