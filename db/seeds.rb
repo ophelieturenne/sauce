@@ -19,7 +19,7 @@ Emergency.destroy_all
 puts "creating aids"
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087132/sauce/Asthma_e1j8tj.png")
-aid = Aid.new(name: "Asthma", description: " description ")
+aid = Aid.new(name: "Asthma", description: "Asthma is a major noncommunicable disease (NCD), affecting both children and adults, and is the most common chronic disease among children. Inflammation and narrowing of the small airways in the lungs cause asthma symptoms, which can be any combination of cough, wheeze, shortness of breath and chest tightness.")
 aid.photo.attach(io: file, filename: "asthma", content_type: "image/png")
 aid.save
 

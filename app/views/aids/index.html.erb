@@ -10,8 +10,13 @@
       <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
 
-<% @aids.each do |aid| %>
-  <%= aid.name %>
-  <%= cl_image_tag aid.photo.key, height: 500, width: 400, :crop => "fit" %>
-  <%= link_to "show more",  aid_path(aid) %>
-<% end %>
+<div class = "first-aid">
+    <% @aids.each do |aid| %>
+  <div class = "text">
+      <%= aid.name %><br>
+  </div>
+      <%= aid.description %>
+      <%= cl_image_tag aid.photo.key, height: 500, width: 400, :crop => "fit" %>
+      <%= link_to "show more",  aid_path(aid) %>
+      <% end %>
+</div>
