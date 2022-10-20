@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'locations/index'
   get 'steps/index'
 
   # get 'aids/index'
@@ -14,4 +15,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :emergencies, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :aids, only: [:index, :show]
+  resources :locations, only: [:index]
 end

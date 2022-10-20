@@ -31,10 +31,10 @@ gem "jbuilder"
 gem "cloudinary"
 
 # map
-# gem "geocoder"
-gem "browser" # This gem is used for grabbing browser details
-gem "maxminddb" # We use MaxMindDB for locating geolocation of the user
-gem "leaflet-rails" # Leaflet is used to place the geo details into a map
+gem "geocoder"
+# gem "browser" # This gem is used for grabbing browser details
+# gem "maxminddb" # We use MaxMindDB for locating geolocation of the user
+# gem "leaflet-rails" # Leaflet is used to place the geo details into a map
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
