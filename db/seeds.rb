@@ -129,7 +129,7 @@ step2.save
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666174778/sauce/Bleeding/call-for-help-female-first-aid_thkntw.png")
 step3 = Step.new(aid: aid1, position: 3, description: "Ask a helper to call 999 or 112 for emergency help and give Ambulance Control details of where the wound is and the extent of the bleeding.
 
-If you are on your own, use the hands-free speaker on a phone so that you can treat while speaking to ambulance control.")
+If you are on your own, use the hands-free speaker on a phone so that you can treat while speaking to ambulance control.")
 step3.photo.attach(io: file, filename: "bleeding", content_type: "image/png")
 step3.save
 
@@ -173,7 +173,7 @@ step1.photo.attach(io: file, filename: "electric-shock", content_type: "image/jp
 step1.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666182824/sauce/Electric_shock/electric_shock_xulruk.jpg")
-step2 = Step.new(aid: aid4, position: 1, description: "Check the person pulse and if neccessary push on the chest to make him breath.")
+step2 = Step.new(aid: aid4, position: 2, description: "Check the person pulse and if neccessary push on the chest to make him breath.")
 step2.photo.attach(io: file, filename: "electric_shock", content_type: "image/jpg")
 step2.save
 
@@ -187,6 +187,51 @@ file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666179718/s
 step2 = Step.new(aid: aid5, position: 2, description: "Once the broken bone is immobilized, apply something cold (preferably ice) to it as soon as you can while you wait for the ambulance.Cold therapy has many benefits, including numbing the pain, reducing inflammation / swelling and reducing bleeding by causing the arteries to constrict.If you don't have ice handy, consider using frozen gel packs or bags of vegetables, but make sure to wrap anything cold in a thin cloth in order to avoid ice burn or frostbite.Apply ice for about 20 minutes or until the area is completely numb before removing it. Compressing it against the injury may help reduce swelling even more as long as it doesn't increase the pain.")
 step2.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
 step2.save
+
+# steps for aid6 (heart attack)
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666251637/sauce/Heart%20Attack/Heart_disease_uqn7kb.jpg")
+step1 = Step.new(aid: aid6, position: 1, description: "The person that will lay down need some space to breath,so keep a distance and try to do a cardiac message.")
+step1.photo.attach(io: file, filename: "heart_attack", content_type: "image/jpg")
+step1.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666251651/sauce/Heart%20Attack/call-for-help-female-first-aid_g3fqu3.png")
+step2 = Step.new(aid: aid6, position: 2, description: "Call the emergency and wait for them to arrive.")
+step2.photo.attach(io: file, filename: "heart_attack", content_type: "image/png")
+step2.save
+
+# steps for aid7 (Seizure)
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666251802/sauce/seizure/lay-down_vpbrr8.jpg")
+step1 = Step.new(aid: aid7, position: 1, description: "Make the person lay on a pillow to his side and remove any glasses.")
+step1.photo.attach(io: file, filename: "Seizure", content_type: "image/jpg")
+step1.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666251826/sauce/seizure/mouth_prohibited_sedtqf.png")
+step2 = Step.new(aid: aid7, position: 2, description: "Do not put anything in mouth and take the time of the incident occured.")
+step2.photo.attach(io: file, filename: "Seizure", content_type: "image/png")
+step2.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666251838/sauce/seizure/call_r6jfi3.jpg")
+step3 = Step.new(aid: aid7, position: 3, description: "call for help as soon as possible.")
+step3.photo.attach(io: file, filename: "Seizure", content_type: "image/jpg")
+step3.save
+
+# steps for aid8 (Unconscious)
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666252415/sauce/Unconscious/woman-providing-first-aid-procedure-to-a-lying-injured-man-vector-illustration-on-a-white-background-eps-vector_csp49505280_kcugyu.webp")
+step1 = Step.new(aid: aid8, position: 1, description: "Position the person on the back. If there are no injuries and the person is breathing, raise the person's legs above heart level — about 12 inches (30 centimeters) — if possible. Loosen belts, collars or other constrictive clothing. To reduce the chance of fainting again, don't get the person up too quickly.")
+step1.photo.attach(io: file, filename: "Unconscious", content_type: "image/webp")
+step1.save
+
+# steps for aid9 (food_poisoning)
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666252546/sauce/Food_poisoning/water_lxpypq.jpg")
+step1 = Step.new(aid: aid9, position: 1, description: "If you think you have food poisoning, lay down and rest.If you are vomiting, take small sips of water to drink as this will help prevent dehydration.")
+step1.photo.attach(io: file, filename: "food_poisoning", content_type: "image/jpg")
+step1.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666252555/sauce/Food_poisoning/watch_hand_wckhaa.jpg")
+step2 = Step.new(aid: aid9, position: 2, description: "Wash hand more so that to prevent the spread of the infection.")
+step2.photo.attach(io: file, filename: "food_poisoning", content_type: "image/jpg")
+step2.save
+
 
 
 puts "saving steps file "
