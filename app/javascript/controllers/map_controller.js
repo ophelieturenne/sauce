@@ -11,7 +11,7 @@ export default class extends Controller {
 
   connect() {
     mapboxgl.accessToken = this.apiKeyValue
-    
+
     this.map = new mapboxgl.Map({
       container: this.element, // container ID
       style: 'mapbox://styles/mapbox/streets-v10', // style URL
@@ -44,10 +44,18 @@ export default class extends Controller {
     });
 
 
-    ///
-
+    /// MARKER
+    this.#addMarkersToMap()
 
   }
 
+  // MARKER
+  #addMarkersToMap() {
+    this.markersValue.forEach((marker) => {
+      new mapboxgl.Marker()
+        .setLngLat([ marker.lng, marker.lat ])
+        .addTo(this.map)
+    })
+  }
 
 }
