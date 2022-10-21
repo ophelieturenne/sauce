@@ -11,12 +11,13 @@ export default class extends Controller {
 
   connect() {
     mapboxgl.accessToken = this.apiKeyValue
-
+    
     this.map = new mapboxgl.Map({
       container: this.element, // container ID
       style: 'mapbox://styles/mapbox/streets-v10', // style URL
       center: [57.5522, -20.3484], // starting position [lng, lat]
-      zoom: 9, // starting zoom
+      zoom: 9,
+      // starting zoom
       });
 
       // this.ll = new mapboxgl.LngLat(-123.9749, 40.7736);
