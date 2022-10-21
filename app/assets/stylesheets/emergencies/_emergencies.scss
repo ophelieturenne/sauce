@@ -1,0 +1,41 @@
+h1 {
+  font-weight: 700;
+  text-align: center;
+}
+
+.search_bar {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+
+}
+
+.search_icon {
+  position: relative;
+  // position: absolute;
+  // top: 10px;
+  // left: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+
+}
+
+.inner_icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+
+.fas, .fa-search  {
+  color:rgb(1, 193, 1);
+}
+
+
+.card {
+  width: 90%;
+  margin: auto;
+}

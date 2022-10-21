@@ -10,4 +10,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// home page
 @import "homepage/index";
+
+
+@import "emergencies/index";
+
+// mapbox
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
