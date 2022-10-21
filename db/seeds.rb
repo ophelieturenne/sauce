@@ -24,47 +24,47 @@ aid.photo.attach(io: file, filename: "asthma", content_type: "image/png")
 aid.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087148/sauce/Bleeding_jhuwy5.png")
-aid1 = Aid.new(name: "Bleeding", description: " description 1 ")
+aid1 = Aid.new(name: "Bleeding", description: "Bleeding, hemorrhage, haemorrhage or blood loss, is blood escaping from the circulatory system from damaged blood vessels.")
 aid1.photo.attach(io: file, filename: "bleeding", content_type: "image/png")
 aid1.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087163/sauce/Burns_d5qnjw.png")
-aid2 = Aid.new(name: "Burns", description: " description 2 ")
+aid2 = Aid.new(name: "Burns", description: "A burn is an injury to the skin or other organic tissue primarily caused by exposure to heat or other causative agents.")
 aid2.photo.attach(io: file, filename: "burns", content_type: "image/png")
 aid2.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087177/sauce/Drowning_o8jhbh.jpg")
-aid3 = Aid.new(name: "Drowning", description: " description 3 ")
+aid3 = Aid.new(name: "Drowning", description: "Drowning is a type of suffocation induced by the submersion of the mouth and nose in a liquid.")
 aid3.photo.attach(io: file, filename: "drowning", content_type: "image/jpg")
 aid3.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087184/sauce/Electric_Shock_cmyt9g.png")
-aid4 = Aid.new(name: "Electric Shock", description: " description 4 ")
+aid4 = Aid.new(name: "Electric Shock", description: "An electrical shock is a physical reaction to electrical currents passing through the body.")
 aid4.photo.attach(io: file, filename: "electric_shock", content_type: "image/png")
 aid4.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087203/sauce/Fracture_ny4dne.jpg")
-aid5 = Aid.new(name: "Fracture", description: " description 5 ")
+aid5 = Aid.new(name: "Fracture", description: "A fracture is a break, usually in a bone. If the broken bone punctures the skin, it is called an open or compound fracture.")
 aid5.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
 aid5.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087216/sauce/Heart_Attack_gmnqx4.jpg")
-aid6 = Aid.new(name: "Heart Attack", description: " description 6 ")
+aid6 = Aid.new(name: "Heart Attack", description: "A heart attack occurs when an artery that sends blood and oxygen to the heart is blocked.")
 aid6.photo.attach(io: file, filename: "heart_attack.", content_type: "image/jpg")
 aid6.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087230/sauce/Seizure_bsmnyx.jpg")
-aid7 = Aid.new(name: "Seizure", description: " description 7 ")
+aid7 = Aid.new(name: "Seizure", description: "A seizure occurs when one or more parts of the brain has a burst of abnormal electrical signals that interrupt normal brain signals.")
 aid7.photo.attach(io: file, filename: "seizure", content_type: "image/jpg")
 aid7.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087241/sauce/Unconscious_bmjbj6.jpg")
-aid8 = Aid.new(name: "Unconscious", description: " description 8 ")
+aid8 = Aid.new(name: "Unconscious", description: "Unconsciousness is when a person is unable to respond to people and activities. Doctors often call this a coma or being in a comatose state.")
 aid8.photo.attach(io: file, filename: "unconscious", content_type: "image/jpg")
 aid8.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087800/sauce/Food_Poisoning_ayulxo.webp")
-aid9 = Aid.new(name: "Food Poisoning", description: " description 9 ")
+aid9 = Aid.new(name: "Food Poisoning", description: "Food poisoning, also called foodborne illness, is an infection or irritation of your digestive tract that spreads through food or drinks.")
 aid9.photo.attach(io: file, filename: "food_poisoning", content_type: "image/webp")
 aid9.save
 
