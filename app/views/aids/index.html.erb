@@ -12,17 +12,17 @@
 
 <div class= "first-aid">
   <% @aids.each do |aid| %>
-
+   <div class="first-class">
     <div class="d-flex">
       <div class = "text">
-        <h2><%= aid.name%></h2>
+        <h2><b><%= aid.name%></b></h2>
         <%= aid.description %>
-        <%= link_to "show more",  aid_path(aid) %>
+        <br><%= link_to "show more",  aid_path(aid) %></b>
       </div>
-      <div>
+    <div>
+   </div>
         <%= cl_image_tag aid.photo.key, height: 200, width: 200, :crop => "fit"%>
       </div>
     </div>
-
-  <% end %>
 </div>
+ <% end %>

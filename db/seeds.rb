@@ -24,7 +24,7 @@ aid.photo.attach(io: file, filename: "asthma", content_type: "image/png")
 aid.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087148/sauce/Bleeding_jhuwy5.png")
-aid1 = Aid.new(name: "Bleeding", description: "Bleeding, hemorrhage, haemorrhage or blood loss, is blood escaping from the circulatory system from damaged blood vessels.")
+aid1 = Aid.new(name: "Bleeding", description: "Bleeding is blood escaping from the circulatory system from damaged blood vessels.")
 aid1.photo.attach(io: file, filename: "bleeding", content_type: "image/png")
 aid1.save
 
@@ -59,7 +59,7 @@ aid7.photo.attach(io: file, filename: "seizure", content_type: "image/jpg")
 aid7.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087241/sauce/Unconscious_bmjbj6.jpg")
-aid8 = Aid.new(name: "Unconscious", description: "Unconsciousness is when a person is unable to respond to people and activities. Doctors often call this a coma or being in a comatose state.")
+aid8 = Aid.new(name: "Unconscious", description: "Unconsciousness is when a person is unable to respond to people and activities.")
 aid8.photo.attach(io: file, filename: "unconscious", content_type: "image/jpg")
 aid8.save
 
