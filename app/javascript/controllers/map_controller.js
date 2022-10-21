@@ -11,7 +11,7 @@ export default class extends Controller {
 
   connect() {
     mapboxgl.accessToken = this.apiKeyValue
-    
+
     this.map = new mapboxgl.Map({
       container: this.element, // container ID
       style: 'mapbox://styles/mapbox/streets-v10', // style URL
@@ -44,10 +44,17 @@ export default class extends Controller {
     });
 
 
+    setTimeout(function() {  myLocation(); }, 3000);
     ///
 
 
   }
 
 
+}
+
+
+function myLocation() {
+  // console.log("test")
+  document.querySelector(".mapboxgl-ctrl-icon").click();
 }
