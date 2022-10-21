@@ -1,23 +1,33 @@
-<h1>My Emergency numbers</h1>
 
 <%# search_bar %>
-<%= form_with url: emergencies_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find your emergency number..."
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
+<%= form_with url: emergencies_path, method: :get, class: "d-flex search_bar" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control search_icon",
+    placeholder: "   Search"
+  %>
+  <button name="button" type="submit" class="btn btn-flat inner_icon">
+    <i class="fas fa-search "></i>
+  </button>
+<% end %>
 
-<% @emergencies.each do |emergency| %>
-  <%= emergency.name %>
-  <%= emergency.description %>
+<h1 class="mb-4">My Emergency numbers</h1>
+<div class="cards">
 
+  <% @emergencies.each do |emergency| %>
+    <div class="card d-flex flex-row">
+      <div>
+        <h2><%= emergency.name %></h2>
+        <p><%= emergency.description %></p>
+      </div>
 
-  <%= link_to "Edit",  edit_emergency_path(emergency) %>
-  <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this booking"} %>
-
+      <div>
+        <%= link_to "Edit",  edit_emergency_path(emergency) %>
+        <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this booking"} %>
+      </div>
+      <br><br>
+    </div>
+</div>
 <% end %>
 <br>
 
