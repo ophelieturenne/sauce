@@ -24,12 +24,12 @@ aid.photo.attach(io: file, filename: "asthma", content_type: "image/png")
 aid.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087148/sauce/Bleeding_jhuwy5.png")
-aid1 = Aid.new(name: "Bleeding", description: "Bleeding is blood escaping from the circulatory system from damaged blood vessels.")
+aid1 = Aid.new(name: "Bleeding", description: "Bleeding is blood escaping from the circulatory system.")
 aid1.photo.attach(io: file, filename: "bleeding", content_type: "image/png")
 aid1.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087163/sauce/Burns_d5qnjw.png")
-aid2 = Aid.new(name: "Burns", description: "A burn is an injury to the skin or other organic tissue primarily caused by exposure to heat or other causative agents.")
+aid2 = Aid.new(name: "Burns", description: "A burn is an injury to the skin or other organic tissue .")
 aid2.photo.attach(io: file, filename: "burns", content_type: "image/png")
 aid2.save
 
@@ -44,7 +44,7 @@ aid4.photo.attach(io: file, filename: "electric_shock", content_type: "image/png
 aid4.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087203/sauce/Fracture_ny4dne.jpg")
-aid5 = Aid.new(name: "Fracture", description: "A fracture is a break, usually in a bone. If the broken bone punctures the skin, it is called an open or compound fracture.")
+aid5 = Aid.new(name: "Fracture", description: "A fracture is a break, usually in a bone.")
 aid5.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
 aid5.save
 
@@ -54,7 +54,7 @@ aid6.photo.attach(io: file, filename: "heart_attack.", content_type: "image/jpg"
 aid6.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087230/sauce/Seizure_bsmnyx.jpg")
-aid7 = Aid.new(name: "Seizure", description: "A seizure occurs when one or more parts of the brain has a burst of abnormal electrical signals that interrupt normal brain signals.")
+aid7 = Aid.new(name: "Seizure", description: "A seizure occurs when one or more parts of the brain has a burst of abnormal electrical signals.")
 aid7.photo.attach(io: file, filename: "seizure", content_type: "image/jpg")
 aid7.save
 
@@ -64,7 +64,7 @@ aid8.photo.attach(io: file, filename: "unconscious", content_type: "image/jpg")
 aid8.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087800/sauce/Food_Poisoning_ayulxo.webp")
-aid9 = Aid.new(name: "Food Poisoning", description: "Food poisoning, also called foodborne illness, is an infection or irritation of your digestive tract that spreads through food or drinks.")
+aid9 = Aid.new(name: "Food Poisoning", description: "Food poisoning, also called foodborne illness, is an infection or irritation of your digestive tract.")
 aid9.photo.attach(io: file, filename: "food_poisoning", content_type: "image/webp")
 aid9.save
 
