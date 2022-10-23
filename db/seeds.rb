@@ -72,11 +72,11 @@ puts "creating users"
 user1 = User.new(email: "john@gmail.com", password: "123456")
 user1.save
 
-puts "creating emergencies"
-emergency1 = Emergency.create(name: "police", description: "Lorem ipsum dolor sit amet consectetur!", user: user1)
+# puts "creating emergencies"
+# emergency1 = Emergency.create(name: "police", description: "Lorem ipsum dolor sit amet consectetur!", user: user1)
 
-puts "save emergencies"
-emergency1.save
+# puts "save emergencies"
+# emergency1.save
 
 
 puts "creating steps"
