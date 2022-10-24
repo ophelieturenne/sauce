@@ -1,0 +1,62 @@
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+:root {
+  --color-bg-variant:#fdfdd7;
+  --color-bg-primary:#fdfde3;
+  --color-white:#fff;
+  --color-black:#000000;
+  --color-bg:#F4F4F4;
+  --transition: all 400 ease;
+  --color-primary: #16f943;
+  --color-p-dark: #00c400;
+  --color-btn-p: #f91616;
+  --transition: all 400 ease;
+
+  --container-width: 90%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-black);
+  line-height: 1.7;
+}
+
+/* =================== GENERAL STYLES ========================================== */
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+h1{
+  font-size: 2.5rem;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+section > h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}

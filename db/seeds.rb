@@ -72,7 +72,6 @@ puts "creating users"
 user1 = User.new(email: "john@gmail.com", password: "123456")
 user1.save
 
-
 puts "creating steps"
 # steps for aid (asthma)
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666163143/sauce/Asthma/Screenshot_122_rmp6lk.png")

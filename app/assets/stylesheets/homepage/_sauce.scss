@@ -1,0 +1,61 @@
+#content {
+  position: relative;
+  height: 130px;
+
+  h2 {
+    color: #fff;
+    width: max-content;
+    margin-inline: auto;
+    font-size: 7em;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--color-primary);
+    position: relative;
+
+    &::after {
+      content: "Sauce";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      color: var(--color-primary);
+      animation: animate 4s ease-in-out infinite;
+    }
+  }
+}
+
+
+#content h2:nth-child(2) {
+  color: var(--color-primary);
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
