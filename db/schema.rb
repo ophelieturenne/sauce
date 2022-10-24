@@ -57,6 +57,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_23_173942) do
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.string "phone_number"
+    t.boolean "ispublic", default: false
     t.index ["user_id"], name: "index_emergencies_on_user_id"
   end
 
