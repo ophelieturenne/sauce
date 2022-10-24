@@ -44,18 +44,15 @@ export default class extends Controller {
     });
 
 
-    /// MARKER
-    this.#addMarkersToMap()
 
+    setTimeout(function() {  myLocation(); }, 1500);
+    ///
   }
 
-  // MARKER
-  #addMarkersToMap() {
-    this.markersValue.forEach((marker) => {
-      new mapboxgl.Marker()
-        .setLngLat([ marker.lng, marker.lat ])
-        .addTo(this.map)
-    })
-  }
+}
 
+
+function myLocation() {
+  // console.log("test")
+  document.querySelector(".mapboxgl-ctrl-icon").click();
 }

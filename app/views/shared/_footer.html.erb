@@ -1,13 +1,50 @@
 <div class="footer">
-  <div class="footer-links">
+  <ul>
+    <li class="footer-links active">
+      <a href="/">
+      <span class ="icon">
+      <i class="fa-solid fa-house"></i>
+      </span>
+      <span class ="text">Home</span>
+      </a>
+    </li>
 
+    <li class="footer-links active">
+      <a href="/emergencies">
+      <span class ="icon"><i class="fa-solid fa-phone"></i>
+      </span>
+      <span class ="text">Emergencies</span>
+      </a>
+    </li>
 
+    <li class="footer-links active">
+      <a href="/aids">
+      <span class ="icon"><i class="fa-solid fa-briefcase-medical"></i>
+      </span>
+      <span class ="text">First-aids</span>
+      </a>
+    </li>
 
+    <li class="footer-links active">
+      <a href="/locations">
+      <span class ="icon"><i class="fa-solid fa-solid fa-location-dot"></i>
+      </span>
+      <span class ="text">Map</span>
+      </a>
+      <div class=indicator></div>
+    </li>
 
-    <a href="/"><i class="fa-solid fa-house"></i></a>
-    <a href="/emergencies"><i class="fa-solid fa-phone"></i></a>
-    <a href="/aids"><i class="fa-solid fa-briefcase-medical"></i></a>
-    <a href="/locations"><i class="fa-sharp fa-solid fa-location-dot"></i></a>
+  </ul>
 
-  </div>
 </div>
+
+<%# <script>
+const list = document.querySelectorAll('.list');
+function activeLink(){
+  list.forEach((item) =>
+  item.classList.remove('active'));
+  this.classList.add('active');
+}
+list,forEach((item) =>
+item>addEventListener('click',activeLink))
+</script> %>

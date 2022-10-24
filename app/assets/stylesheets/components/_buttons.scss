@@ -1,0 +1,15 @@
+.btn-default{
+  border-radius: 20px;
+  font-size: 15px;
+  line-height: 18px;
+  color: black;
+  padding: 8px 20px;
+  background: #16f943;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-default:hover{
+  color: white;
+  transition: ease(0.4s);
+}
