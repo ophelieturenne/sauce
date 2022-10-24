@@ -44,12 +44,10 @@ export default class extends Controller {
     });
 
 
-    setTimeout(function() {  myLocation(); }, 3000);
+
+    setTimeout(function() {  myLocation(); }, 1500);
     ///
-
-
   }
-
 
 }
 

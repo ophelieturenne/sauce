@@ -26,7 +26,9 @@
       <div class="bg-white rounded shadow h-200 p-3">
         <h3>My location</h3>
         <p>Your live location here!</p>
-        <%= link_to "click here", locations_path,class: "btn-default" %>
+        <%= link_to locations_path, data: { turbo: false } do %>
+          <i class="fa-solid fa-solid fa-location-dot"></i>
+        <% end %>
       </div>
     </div>
   </div>
