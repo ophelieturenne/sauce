@@ -26,12 +26,9 @@
     </li>
 
     <li class="footer-links active">
-      <%= link_to "", locations_path,class: "btn-default" %>
-      <%# <a href="/locations">
-      <span class ="icon"><i class="fa-solid fa-solid fa-location-dot"></i>
-      </span>
-      <span class ="text">Map</span>
-      </a> %>
+      <%= link_to locations_path, data: { turbo: false } do %>
+        <i class="fa-solid fa-solid fa-location-dot"></i>
+      <% end %>
       <div class=indicator></div>
     </li>
 
