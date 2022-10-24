@@ -1,6 +1,8 @@
 .step-aid {
   box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.16);
   padding:20px;
+  margin-left: 17px;
+  margin-top: 7px;
 }
 
 h5 {
@@ -9,5 +11,10 @@ h5 {
 }
 
 .step-text {
-  font-size: 14px;
+  margin-top: 8px;
+}
+
+.step-aid-image {
+  height:250px;
+  width:260px;
 }
