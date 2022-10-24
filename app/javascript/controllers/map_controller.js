@@ -53,6 +53,6 @@ export default class extends Controller {
 
 
 function myLocation() {
-  // console.log("test")
+  console.log("test")
   document.querySelector(".mapboxgl-ctrl-icon").click();
 }
