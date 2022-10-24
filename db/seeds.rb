@@ -72,12 +72,6 @@ puts "creating users"
 user1 = User.new(email: "john@gmail.com", password: "123456")
 user1.save
 
-puts "creating emergencies"
-emergency1 = Emergency.create(name: "police", description: "Lorem ipsum dolor sit amet consectetur!", user: user1)
-
-puts "save emergencies"
-emergency1.save
-
 
 puts "creating steps"
 # steps for aid (asthma)
@@ -133,7 +127,7 @@ If you are on your own, use the hands-free speaker on a phone so that you can tr
 step3.photo.attach(io: file, filename: "bleeding", content_type: "image/png")
 step3.save
 
-# steps for aid2 (burns)
+# # steps for aid2 (burns)
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666172339/sauce/Burning/Burns-and-scalds-what-to-do-PIP-4_jnidsj.jpg")
 step1 = Step.new(aid: aid2, position: 1, description: "Treat the burn under cool running water for 20 minutes. If your child is upset or too cold, cool the burn for a few minutes at a time over the next three hours.")
@@ -166,7 +160,7 @@ step3 = Step.new(aid: aid3, position: 3, description: "Make a mouth to mouth so 
 step3.photo.attach(io: file, filename: "drowning", content_type: "image/jpg")
 step3.save
 
-# steps for aid4 (electric shock)
+# # steps for aid4 (electric shock)
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666182571/sauce/Electric_shock/First-Aid-Treatment-For-Electric-Shock_xm62la.jpg")
 step1 = Step.new(aid: aid4, position: 1, description: "Take an object like wood (not metal) to push away the electric wire to avoid electricity.")
 step1.photo.attach(io: file, filename: "electric-shock", content_type: "image/jpg")
@@ -231,6 +225,15 @@ file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666252555/s
 step2 = Step.new(aid: aid9, position: 2, description: "Wash hand more so that to prevent the spread of the infection.")
 step2.photo.attach(io: file, filename: "food_poisoning", content_type: "image/jpg")
 step2.save
+
+
+# Emergency number
+
+admin = User.create(email: "admin@test.com", password: "123456")
+emergency1 = Emergency.create(name: "Police", description: "call Samu", ispublic: true, user: admin)
+emergency2 = Emergency.create(name: "Samu", description: "call Samu", ispublic: true, user: admin)
+emergency3 = Emergency.create(name: "Fire Station", description: "call Fire Station", ispublic: true, user: admin)
+emergency4 = Emergency.create(name: "Coast Guard", description: "call Coast Guard", ispublic: true, user: admin)
 
 
 

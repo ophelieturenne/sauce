@@ -16,28 +16,6 @@
 
   <div class="row my-2">
 
-  <div class="col-md-4 mb-3"  data-aos="zoom-in">
-    <div class="bg-white rounded shadow h-300 p-3">
-      <h3>Police</h3>
-      <p>Police number</p>
-      <%= link_to "Call",  "#", class: "btn-default"%>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-3"  data-aos="zoom-in">
-    <div class="bg-white rounded shadow h-300 p-3">
-      <h3>Samu</h3>
-      <p>Samu number</p>
-      <%= link_to "Call",  "#", class: "btn-default"%>
-    </div>
-  </div>
-
-  <div class="col-md-4 mb-3"  data-aos="zoom-in">
-    <div class="bg-white rounded shadow h-300 p-3">
-      <h3>Fire station</h3>
-      <p>Fire station number</p>
-      <%= link_to "Call",  "#", class: "btn-default"%>
-    </div>
   </div>
 
     <% @emergencies.each do |emergency| %>
@@ -46,8 +24,11 @@
         <h3><%= emergency.name %></h3>
         <p><%= emergency.description %></p>
         <%= link_to "Call",  "#", class: "btn-default"%>
-        <%= link_to "Edit",  edit_emergency_path(emergency), class: "btn-default"%>
-        <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this number"}, class: "btn-default" %>
+        <% if emergency.user == current_user %>
+
+          <%= link_to "Edit",  edit_emergency_path(emergency), class: "btn-default"%>
+          <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this number"}, class: "btn-default" %>
+        <% end %>
       </div>
     </div>
     <% end %>
