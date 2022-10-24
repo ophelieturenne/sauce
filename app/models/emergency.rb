@@ -4,4 +4,5 @@ class Emergency < ApplicationRecord
 
   validates :name, presence: true
   validates :description, presence: true
+  validates :ispublic, inclusion: [true, false]
 end
