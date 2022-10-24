@@ -1,14 +1,16 @@
 #content {
   position: relative;
+  margin-top: 0;
   height: 130px;
 
   h2 {
     color: #fff;
+    font-family: "Poppins", sans-serif;
     width: max-content;
     margin-inline: auto;
     font-size: 7em;
     color: transparent;
-    -webkit-text-stroke: 2px var(--color-primary);
+    -webkit-text-stroke: 2px rgb(67, 67, 67);
     position: relative;
 
     &::after {
@@ -17,7 +19,7 @@
       top: 0;
       left: 0;
       right: 0;
-      color: var(--color-primary);
+      color: #f91616;
       animation: animate 4s ease-in-out infinite;
     }
   }
@@ -59,3 +61,4 @@
     );
   }
 }
+
