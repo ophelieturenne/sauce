@@ -229,10 +229,10 @@ step2.save
 # Emergency number
 
 admin = User.create(email: "admin@test.com", password: "123456")
-emergency1 = Emergency.create(name: "Police", description: "call Samu", ispublic: true, user: admin)
-emergency2 = Emergency.create(name: "Samu", description: "call Samu", ispublic: true, user: admin)
-emergency3 = Emergency.create(name: "Fire Station", description: "call Fire Station", ispublic: true, user: admin)
-emergency4 = Emergency.create(name: "Coast Guard", description: "call Coast Guard", ispublic: true, user: admin)
+emergency1 = Emergency.create(name: "Police Direct Line", phone_number: "999", description: "call Samu", ispublic: true, user: admin)
+emergency2 = Emergency.create(name: "Samu (Ambulance)", phone_number: "114", description: "call Samu", ispublic: true, user: admin)
+emergency3 = Emergency.create(name: "Fire Services", phone_number: "115", description: "call Fire Station", ispublic: true, user: admin)
+emergency4 = Emergency.create(name: "Police Information Room", phone_number: "208 0034",description: "call Coast Guard", ispublic: true, user: admin)
 
 
 
