@@ -2,13 +2,13 @@
 
  <div class="step-aid">
   <% @steps.each do |step| %>
-  <div class="product shadow-sm mb-5 ">
+  <div class="product">
     <% step.photo.key %>
       <%= cl_image_tag step.photo.key, class:"step-aid-image", :crop => "fit"%>
-    <div class="step-text">
+
     <b>STEP:</b>  <a><%= step.position %></a><br>
     <b>Description:</b> <a><%= step.description %></a>
-    </div>
+
   </div>
   <% end %>
 </div>
