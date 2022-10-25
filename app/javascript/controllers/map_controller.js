@@ -18,7 +18,7 @@ export default class extends Controller {
       center: [57.5522, -20.3484], // starting position [lng, lat]
       zoom: 9,
       // starting zoom
-      });
+    });
 
       // this.ll = new mapboxgl.LngLat(-123.9749, 40.7736);
       // console.log(ll.lng);
@@ -43,13 +43,14 @@ export default class extends Controller {
 
     });
 
-
-    setTimeout(function() {  myLocation(); }, 3000);
+    setTimeout(function() {  myLocation(); }, 1500);
     ///
-
-
   }
 
+  #fetchAddress() {
+    url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${lat}%2C%20${long}.json?access_token=${key}`
+
+  }
 
 }
 
