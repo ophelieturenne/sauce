@@ -15,6 +15,7 @@ Step.destroy_all
 Aid.destroy_all
 User.destroy_all
 Emergency.destroy_all
+Quizz.destroy_all
 
 puts "creating aids"
 
@@ -225,19 +226,37 @@ step2 = Step.new(aid: aid9, position: 2, description: "Wash hand more so that to
 step2.photo.attach(io: file, filename: "food_poisoning", content_type: "image/jpg")
 step2.save
 
-
-# Emergency number
-
-admin = User.create(email: "admin@test.com", password: "123456")
-emergency1 = Emergency.create(name: "Police Direct Line", phone_number: "999", description: "call Samu", ispublic: true, user: admin)
-emergency2 = Emergency.create(name: "Samu (Ambulance)", phone_number: "114", description: "call Samu", ispublic: true, user: admin)
-emergency3 = Emergency.create(name: "Fire Services", phone_number: "115", description: "call Fire Station", ispublic: true, user: admin)
-emergency4 = Emergency.create(name: "Police Information Room", phone_number: "208 0034",description: "call Coast Guard", ispublic: true, user: admin)
-
-
-
 puts "saving steps file "
 step1.save
 step2.save
 step3.save
 step4.save
+
+# Emergency number
+puts "creating emergency"
+
+admin = User.create(email: "admin@test.com", password: "123456")
+emergency1 = Emergency.create(name: "Police Direct Line", phone_number: "999", description: "call Samu", ispublic: true, user: admin)
+emergency2 = Emergency.create(name: "Samu (Ambulance)", phone_number: "114", description: "call Samu", ispublic: true, user: admin)
+emergency3 = Emergency.create(name: "Fire Services", phone_number: "115", description: "call Fire Station", ispublic: true, user: admin)
+emergency4 = Emergency.create(name: "Police Information Room", phone_number: "2080034",description: "call Coast Guard", ispublic: true, user: admin)
+
+puts "saving emergency file "
+emergency1.save
+emergency2.save
+emergency3.save
+emergency4.save
+
+# quizz
+puts "creating quizz "
+
+quizz1 = Quizz.new.create(name:asthma)
+quizz2 = Quizz.new.create(name:bleeding)
+quizz3 = Quizz.new.create(name:burns)
+quizz4 = Quizz.new.create(name:seizure)
+
+puts "saving quizz file "
+quizz1.save
+quizz2.save
+quizz3.save
+quizz4.save
