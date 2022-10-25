@@ -1,2 +1,11 @@
-<h1>Quizzs#show</h1>
-<p>Find me in app/views/quizzs/show.html.erb</p>
+<section class="container vh-100">
+  <section id="question">
+    <h2><%= @quizz.name %></h2>
+    <% @quizz.questions.each do |question| %>
+          <h3><%= question.name %></h3>
+          <button class="btn"  data-controller="answer" data-action="click->answer#disable" data-answer-ans-value="<%= question.answer %>"><%= question.option1 %></button>
+          <button class="btn"  data-controller="answer" data-action="click->answer#disable" data-answer-ans-value="<%= question.answer %>"><%= question.option2 %></button>
+          <button class="btn"  data-controller="answer" data-action="click->answer#disable" data-answer-ans-value="<%= question.answer %>"><%= question.option3 %></button>
+    <% end %>
+  </section>
+</section>

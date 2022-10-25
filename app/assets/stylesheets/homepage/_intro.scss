@@ -1,0 +1,22 @@
+#intro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+        -45deg,
+        rgb(203, 228, 35) 0%,
+        rgb(27, 219, 65) 25%,
+        rgb(24, 192, 192) 51%,
+        rgb(32, 99, 214) 100%
+  );
+  animation: AnimateBG 5s ease infinite;
+}
+
+@keyframes AnimateBG {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}

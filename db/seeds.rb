@@ -16,6 +16,7 @@ Aid.destroy_all
 User.destroy_all
 Emergency.destroy_all
 Quizz.destroy_all
+Question.destroy_all
 
 puts "creating aids"
 
@@ -250,13 +251,24 @@ emergency4.save
 # quizz
 puts "creating quizz "
 
-quizz1 = Quizz.new.create(name:asthma)
-quizz2 = Quizz.new.create(name:bleeding)
-quizz3 = Quizz.new.create(name:burns)
-quizz4 = Quizz.new.create(name:seizure)
+quizz1 = Quizz.create(name: "asthma")
+quizz2 = Quizz.create(name: "bleeding")
+quizz3 = Quizz.create(name: "burns")
+quizz4 = Quizz.create(name: "seizure")
 
 puts "saving quizz file "
 quizz1.save
 quizz2.save
 quizz3.save
 quizz4.save
+
+# question
+puts "creating question "
+question1 = Question.create(name: "What is the first step to take in case of an asthma attack", option1:"Smoke", option2:"kill", option3:"sit", answer:"sit", quizz:quizz1)
+question2 = Question.create(name: "What is the second step to take in case of an asthma attack", option1:"Smoke", option2:"kill", option3:"sit", answer:"sit", quizz:quizz1)
+question3 = Question.create(name: "What is the third step to take in case of an asthma attack", option1:"Smoke", option2:"kill", option3:"sit", answer:"sit", quizz:quizz1)
+
+puts "saving question file "
+question1.save
+question2.save
+question3.save

@@ -1,41 +1,45 @@
-<section id="title">
-  <div id="content">
-    <h2>Sauce</h2>
-  </div>
-</section>
+<div class="container vh-100">
 
-<section id="about">
-  <h2>Sauce pur tir twa dan la, sauce</h2>
-  <h3>Your Life saver, in your pocket!</h3>
-</section>
+  <section id="about">
+    <h2>Your Life saver, in your pocket!</h2>
+  </section>
 
-<section id="categories">
-  <div class="container cat__cards">
+  <section id="ImgSauce">
+    <img src = "../assets/HP1.png" alt="My Happy SVG"/>
+  </section>
 
-    <%= link_to emergencies_path do %>
-      <div class="cat__card">
-        <i class="fa-solid fa-phone" id= "icon"></i>
-        <h3>Emergencies</h3>
-      </div>
-    <% end %>
+  <section id="categories">
+    <div class="container cat__cards">
 
-    <%= link_to aids_path do %>
-      <div class="cat__card">
-        <i class="fa-solid fa-kit-medical" id= "icon"></i>
-        <h3>First-aid</h3>
-      </div>
-    <% end %>
+      <%= link_to emergencies_path do %>
+        <div class="cat__card">
+          <i class="fa-solid fa-phone" id= "icon"></i>
+          <h3>Emergencies</h3>
+        </div>
+      <% end %>
 
-  </div>
-</section>
+      <%= link_to aids_path do %>
+        <div class="cat__card">
+          <i class="fa-solid fa-kit-medical" id= "icon"></i>
+          <h3>First-aid</h3>
+        </div>
+      <% end %>
 
-<section id = "location">
-  <h2>My location</h2>
-  <div class="container">
-    <div class="map-container"
-    data-controller="map"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      <%= link_to locations_index_path do %>
+        <div class="cat__card">
+          <i class="fa-solid fa-location-dot" id= "icon"></i>
+          <h3>Location</h3>
+        </div>
+      <% end %>
+
+      <%= link_to quizzs_path do %>
+        <div class="cat__card">
+          <i class="fa-solid fa-lightbulb" id= "icon"></i>
+          <h3>Quizz</h3>
+        </div>
+      <% end %>
+
     </div>
-  </div>
+  </section>
 
-</section>
+</div>
