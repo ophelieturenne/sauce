@@ -10,8 +10,18 @@
       <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
 
-<% @aids.each do |aid| %>
-  <%= aid.name %>
-  <%= cl_image_tag aid.photo.key, height: 500, width: 400, :crop => "fit" %>
-  <%= link_to "show more",  aid_path(aid) %>
-<% end %>
+<%# OT_front %>
+<section id="aid">
+  <div class="container cat__cards">
+    <% @aids.each do |aid| %>
+      <%= link_to aid_path(aid) do %>
+        <div class="cat__card">
+          <%= aid.name %>
+          <%= cl_image_tag aid.photo.key, height: 100, width: 100, :crop => "fit" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</section>
+
+
