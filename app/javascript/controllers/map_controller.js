@@ -8,7 +8,6 @@ export default class extends Controller {
 
   connect() {
     mapboxgl.accessToken = this.apiKeyValue
-
     this.map = new mapboxgl.Map({
       container: this.element, // container ID
       style: 'mapbox://styles/mapbox/streets-v10', // style URL
@@ -32,7 +31,7 @@ export default class extends Controller {
     setTimeout(function() {  myLocation(); }, 3000);
 
     navigator.geolocation.getCurrentPosition(position => {
-      if (this.map.loaded()) {
+      // if (this.map.loaded()) {
         const lng = position.coords.longitude;
         const lat = position.coords.latitude;
         console.log('Your current position is:');
@@ -60,7 +59,7 @@ export default class extends Controller {
               .addTo(this.map)
             this.popItUp();
           })
-      }
+      // }
     })
   }
 

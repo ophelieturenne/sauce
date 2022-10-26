@@ -1,0 +1,29 @@
+<section class="container vh-100">
+
+  <section id="quizz">
+    <h2>Quizz time !</h2>
+    <%= form_with url: quizzs_path, method: :get, class: "d-flex search_bar" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control search_icon",
+        placeholder: "   Search"
+      %>
+      <button name="button" type="submit" class="btn btn-flat inner_icon">
+        <i class="fas fa-search "></i>
+      </button>
+    <% end %>
+
+
+
+    <div class="container cat__cards">
+      <% @quizzs.each do |quizz| %>
+        <%= link_to quizz_path(quizz) do %>
+          <div class="cat__card">
+            <%= quizz.name %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </section>
+
+</section>

@@ -17,11 +17,9 @@
       <%= link_to aid_path(aid) do %>
         <div class="cat__card">
           <%= aid.name %>
-          <%= cl_image_tag aid.photo.key, height: 100, width: 100, :crop => "fit" %>
+          <%= cl_image_tag aid.photo.key, class:"aid-category-image", :crop => "fit" %>
         </div>
       <% end %>
     <% end %>
   </div>
 </section>
-
-
