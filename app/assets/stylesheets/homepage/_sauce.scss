@@ -69,10 +69,10 @@
 }
 
 
-#about {
-  img {
-    object-fit: cover;
-    width: 100%;
-    object-position: center;
-  }
+.ImgSauce {
+  object-fit: cover;
+  width: 100%;
+  object-position: center;
+  margin-inline: auto;
+
 }
