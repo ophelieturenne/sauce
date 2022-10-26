@@ -20,16 +20,12 @@ Question.destroy_all
 
 puts "creating aids"
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666684586/sauce/man-uses-asthma-in[…]t-inhalation-medicine-bronchial-vector-219909389_bkpkby.jpg")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666684586/sauce/man-uses-asthma-inhaler-against-allergic-attack-world-day-allergy-asthmatic-concept-inhalation-medicine-bronchial-vector-219909389_bkpkby.jpg")
 aid = Aid.new(name: "Asthma", description: " description ")
-aid.photo.attach(io: file, filename: "asthma", content_type: "image/jpg")
+aid.photo.attach(io: file, filename: "asthma", content_type: "image/png")
 aid.save
 
-<<<<<<< HEAD
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087148/sauce/Bleeding_jhuwy5.png")
-=======
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666763683/sauce/wound-care_2x-1200x852_1_mwnjir.png")
->>>>>>> b4314792809fc94ecebc1ebc598f9243a253559a
 aid1 = Aid.new(name: "Bleeding", description: " description 1 ")
 aid1.photo.attach(io: file, filename: "bleeding", content_type: "image/png")
 aid1.save
