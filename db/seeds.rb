@@ -18,7 +18,9 @@ Emergency.destroy_all
 
 puts "creating aids"
 
-file = URI.open("z"image/png")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666684586/sauce/man-uses-asthma-in[…]t-inhalation-medicine-bronchial-vector-219909389_bkpkby.jpg")
+aid = Aid.new(name: "Asthma", description: " description ")
+aid.photo.attach(io: file, filename: "asthma", content_type: "image/jpg")
 aid.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087148/sauce/Bleeding_jhuwy5.png")
