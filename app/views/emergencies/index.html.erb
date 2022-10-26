@@ -11,13 +11,10 @@
   </button>
 <% end %>
 
-<div class="container py-4 mb-3 vh-100">
-
-  <h2 class="mb-3">My Emergency numbers</h2>
-
-  <div class="row my-2">
+<%# OT_front %>
+<section id="default__emergency">
+  <div class="container cat__cards">
     <% @emergencies.each do |emergency| %>
-      <div class="container cat__cards">
         <div class="<%= emergency.user == current_user ? "test" : "cat__card" %>  ">
           <h3><%= emergency.name %></h3>
           <p><%= emergency.phone_number %></p>
@@ -27,8 +24,9 @@
             <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this number"}, class: "btn-default" %>
           <% end %>
         </div>
-      </div>
     <% end %>
+  </div>
+</section>
 
     <div><h2>My list</h2>
 
@@ -36,6 +34,5 @@
         <i class="fa-solid fa-circle-plus"></i>
       <% end %>
     </div>
-  </div>
 
 </div>
