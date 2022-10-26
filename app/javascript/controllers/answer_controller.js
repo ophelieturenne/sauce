@@ -11,7 +11,6 @@ export default class extends Controller {
   }
   disable() {
     if(this.element.innerText == this.ansValue){
-      this.element.innerText = "alert!"
       this.element.style.backgroundColor = "green"
     }
     else {

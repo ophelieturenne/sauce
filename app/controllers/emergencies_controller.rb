@@ -55,6 +55,6 @@ class EmergenciesController < ApplicationController
 
   private
   def emergency_params
-    params.require(:emergency).permit(:name, :description, :phone_number)
+    params.require(:emergency).permit(:name, :phone_number)
   end
 end
