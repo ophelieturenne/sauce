@@ -5,10 +5,10 @@
   <div class="product">
     <% step.photo.key %>
       <%= cl_image_tag step.photo.key, class:"step-aid-image", :crop => "fit"%>
-
-    <b>STEP:</b>  <a><%= step.position %></a><br>
-    <b>Description:</b> <a><%= step.description %></a>
-
+     <div class="product-text">
+      STEP:  <a><%= step.position %></a><br>
+      <%= step.description %>
+      </div>
   </div>
   <% end %>
-</div>
+ </div>
