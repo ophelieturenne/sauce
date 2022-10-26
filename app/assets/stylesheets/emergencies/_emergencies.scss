@@ -31,7 +31,7 @@ h1 {
 
 
 .fas, .fa-search  {
-  color:rgb(1, 193, 1);
+  color: var(--color-primary);
 }
 
 
@@ -43,4 +43,10 @@ h1 {
 
 .test {
   background-color: blue;
+}
+
+#plus {
+  font-size: 40px;
+  color: var(--color-primary);
+  margin-left: 85%;
 }

@@ -1,35 +1,39 @@
+<div class="container vh-100">
+  <section id="default__emergency">
+    <h2>My emergency list</h2>
 
-<%# search_bar %>
-<%= form_with url: emergencies_path, method: :get, class: "d-flex search_bar" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control search_icon",
-    placeholder: "   Search"
-  %>
-  <button name="button" type="submit" class="btn btn-flat inner_icon">
-    <i class="fas fa-search "></i>
-  </button>
-<% end %>
-
-<%# OT_front %>
-<section id="default__emergency">
-  <div class="container cat__cards">
-    <% @emergencies.each do |emergency| %>
-        <div class="<%= emergency.user == current_user ? "test" : "cat__card" %>  ">
-          <h3><%= emergency.name %></h3>
-          <p><%= emergency.phone_number %></p>
-          <% if emergency.user == current_user %>
-            <%= sms_to emergency.phone_number, "Alert", class: "btn-default", body: "I need help" %>
-            <%= link_to "Edit",  edit_emergency_path(emergency), class: "btn-default"%>
-            <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this number"}, class: "btn-default" %>
-          <% end %>
-        </div>
+    <%= form_with url: emergencies_path, method: :get, class: "d-flex search_bar" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control search_icon",
+        placeholder: "   Search"
+      %>
+      <button name="button" type="submit" class="btn btn-flat inner_icon">
+        <i class="fas fa-search "></i>
+      </button>
     <% end %>
-  </div>
-</section>
-    <div><h2>My list</h2>
-      <%= link_to new_emergency_path do %>
-        <i class="fa-solid fa-circle-plus"></i>
+
+    <div class="cat__cards">
+      <% @emergencies.each do |emergency| %>
+          <div class="<%= emergency.user == current_user ? "cat__card" : "cat__c" %>  ">
+            <h3><%= emergency.name %></h3>
+            <p><%= emergency.phone_number %></p>
+            <%= phone_to emergency.phone_number, "call", class:"#{ emergency.ispublic ? "btn-default" : "btn-new" }"%>
+            <% if emergency.user == current_user %>
+              <%= sms_to emergency.phone_number, "Alert", class: "btn-new", body: "I need help" %>
+              <%= link_to "Edit",  edit_emergency_path(emergency), class: "btn-new"%>
+              <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this number"}, class: "btn-new" %>
+            <% end %>
+          </div>
       <% end %>
     </div>
+
+
+  </section>
+
+  <section id="create">
+      <%= link_to new_emergency_path do %>
+        <i class="fa-solid fa-circle-plus" id="plus"></i>
+      <% end %>
+  </section>
 </div>
