@@ -11,7 +11,7 @@ class AidsController < ApplicationController
 
   def show
     @aid = Aid.find(params[:id])
-    @steps = Step.where(aid: @aid)
+    @steps = @aid.steps.order(:position)
     authorize @aid
   end
 end
