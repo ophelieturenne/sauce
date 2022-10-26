@@ -128,7 +128,7 @@ If you are on your own, use the hands-free speaker on a phone so that you can tr
 step3.photo.attach(io: file, filename: "bleeding", content_type: "image/png")
 step3.save
 
-# # steps for aid2 (burns)
+# steps for aid2 (burns)
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666172339/sauce/Burning/Burns-and-scalds-what-to-do-PIP-4_jnidsj.jpg")
 step1 = Step.new(aid: aid2, position: 1, description: "Treat the burn under cool running water for 20 minutes. If your child is upset or too cold, cool the burn for a few minutes at a time over the next three hours.")
@@ -145,23 +145,18 @@ step3 = Step.new(aid: aid2, position: 3, description: "Cover the burn with a loo
 step3.photo.attach(io: file, filename: "burns", content_type: "image/gif")
 step3.save
 
-# steps for aid3 (drowning)
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666180847/sauce/Drowning/drowning-object_kb2ynr.jpg")
-step1 = Step.new(aid: aid3, position: 1, description: "Try to catch any objects to pull out the persons out of water.")
-step1.photo.attach(io: file, filename: "drowning", content_type: "image/gif")
+# steps for aid3 (fracture)
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666179714/sauce/Fracture/fracture_zajppt.jpg")
+step1 = Step.new(aid: aid3, position: 1, description: "Stay still and don't move the broken bones.")
+step1.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
 step1.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666181211/sauce/Drowning/drowningwater_oh53tq.jpg")
-step2 = Step.new(aid: aid3, position: 2, description: "Make the person lay down and push on his chest to make the water out of his body so that he/she can breath.")
-step2.photo.attach(io: file, filename: "drowning", content_type: "image/jpg")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666179718/sauce/Fracture/fracture-ice-pack_zbfo96.jpg")
+step2 = Step.new(aid: aid3, position: 2, description: "Once the broken bone is immobilized, apply something cold (preferably ice) to it as soon as you can while you wait for the ambulance.Cold therapy has many benefits, including numbing the pain, reducing inflammation / swelling and reducing bleeding by causing the arteries to constrict.If you don't have ice handy, consider using frozen gel packs or bags of vegetables, but make sure to wrap anything cold in a thin cloth in order to avoid ice burn or frostbite.Apply ice for about 20 minutes or until the area is completely numb before removing it. Compressing it against the injury may help reduce swelling even more as long as it doesn't increase the pain.")
+step2.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
 step2.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666181882/sauce/Drowning/first-aid-to-drowned-person-man-doing-mouth-vector-32269290_qbguxn.jpg")
-step3 = Step.new(aid: aid3, position: 3, description: "Make a mouth to mouth so that the person can be able to breath properly and avoid suffocating.")
-step3.photo.attach(io: file, filename: "drowning", content_type: "image/jpg")
-step3.save
-
-# # steps for aid4 (electric shock)
+# steps for aid4 (electric shock)
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666182571/sauce/Electric_shock/First-Aid-Treatment-For-Electric-Shock_xm62la.jpg")
 step1 = Step.new(aid: aid4, position: 1, description: "Take an object like wood (not metal) to push away the electric wire to avoid electricity.")
 step1.photo.attach(io: file, filename: "electric-shock", content_type: "image/jpg")
@@ -172,16 +167,19 @@ step2 = Step.new(aid: aid4, position: 2, description: "Check the person pulse an
 step2.photo.attach(io: file, filename: "electric_shock", content_type: "image/jpg")
 step2.save
 
-# steps for aid5 (fracture)
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666179714/sauce/Fracture/fracture_zajppt.jpg")
-step1 = Step.new(aid: aid5, position: 1, description: "Stay still and don't move the broken bones.")
-step1.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
+# steps for aid5 (food_poisoning)
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666252546/sauce/Food_poisoning/water_lxpypq.jpg")
+step1 = Step.new(aid: aid5, position: 1, description: "If you think you have food poisoning, lay down and rest.If you are vomiting, take small sips of water to drink as this will help prevent dehydration.")
+step1.photo.attach(io: file, filename: "food_poisoning", content_type: "image/jpg")
 step1.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666179718/sauce/Fracture/fracture-ice-pack_zbfo96.jpg")
-step2 = Step.new(aid: aid5, position: 2, description: "Once the broken bone is immobilized, apply something cold (preferably ice) to it as soon as you can while you wait for the ambulance.Cold therapy has many benefits, including numbing the pain, reducing inflammation / swelling and reducing bleeding by causing the arteries to constrict.If you don't have ice handy, consider using frozen gel packs or bags of vegetables, but make sure to wrap anything cold in a thin cloth in order to avoid ice burn or frostbite.Apply ice for about 20 minutes or until the area is completely numb before removing it. Compressing it against the injury may help reduce swelling even more as long as it doesn't increase the pain.")
-step2.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666252555/sauce/Food_poisoning/watch_hand_wckhaa.jpg")
+step2 = Step.new(aid: aid5, position: 2, description: "Wash hand more so that to prevent the spread of the infection.")
+step2.photo.attach(io: file, filename: "food_poisoning", content_type: "image/jpg")
 step2.save
+
+
+
 
 # steps for aid6 (heart attack)
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666251637/sauce/Heart%20Attack/Heart_disease_uqn7kb.jpg")
@@ -216,16 +214,21 @@ step1 = Step.new(aid: aid8, position: 1, description: "Position the person on th
 step1.photo.attach(io: file, filename: "Unconscious", content_type: "image/webp")
 step1.save
 
-# steps for aid9 (food_poisoning)
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666252546/sauce/Food_poisoning/water_lxpypq.jpg")
-step1 = Step.new(aid: aid9, position: 1, description: "If you think you have food poisoning, lay down and rest.If you are vomiting, take small sips of water to drink as this will help prevent dehydration.")
-step1.photo.attach(io: file, filename: "food_poisoning", content_type: "image/jpg")
+# steps for aid9 (drowning)
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666180847/sauce/Drowning/drowning-object_kb2ynr.jpg")
+step1 = Step.new(aid: aid9, position: 1, description: "Try to catch any objects to pull out the persons out of water.")
+step1.photo.attach(io: file, filename: "drowning", content_type: "image/gif")
 step1.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666252555/sauce/Food_poisoning/watch_hand_wckhaa.jpg")
-step2 = Step.new(aid: aid9, position: 2, description: "Wash hand more so that to prevent the spread of the infection.")
-step2.photo.attach(io: file, filename: "food_poisoning", content_type: "image/jpg")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666181211/sauce/Drowning/drowningwater_oh53tq.jpg")
+step2 = Step.new(aid: aid9, position: 2, description: "Make the person lay down and push on his chest to make the water out of his body so that he/she can breath.")
+step2.photo.attach(io: file, filename: "drowning", content_type: "image/jpg")
 step2.save
+
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666181882/sauce/Drowning/first-aid-to-drowned-person-man-doing-mouth-vector-32269290_qbguxn.jpg")
+step3 = Step.new(aid: aid9, position: 3, description: "Make a mouth to mouth so that the person can be able to breath properly and avoid suffocating.")
+step3.photo.attach(io: file, filename: "drowning", content_type: "image/jpg")
+step3.save
 
 puts "saving steps file "
 step1.save
