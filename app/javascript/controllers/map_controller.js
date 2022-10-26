@@ -1,23 +1,22 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from "mapbox-gl"
-// import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
-​
+
 export default class extends Controller {
   static values = {
     apiKey: String,
   }
-​
+
   connect() {
     mapboxgl.accessToken = this.apiKeyValue
-​
+
     this.map = new mapboxgl.Map({
       container: this.element, // container ID
       style: 'mapbox://styles/mapbox/streets-v10', // style URL
       center: [57.5522, -20.3484], // starting position [lng, lat]
-      zoom: 9,
+      zoom: 9
       // starting zoom
     });
-​
+
     this.map.addControl(
       new mapboxgl.GeolocateControl({
       positionOptions: {
@@ -29,16 +28,11 @@ export default class extends Controller {
       showUserHeading: true
       })
     );
-​
-    this.map.on('click', (e) => {
-      // `e.lngLat` is the longitude, latitude geographical position of the event.
-      document.getElementById('info').innerHTML = JSON.stringify(e.lngLat.wrap());
-    });
-​
+
     setTimeout(function() {  myLocation(); }, 3000);
-​
+
     navigator.geolocation.getCurrentPosition(position => {
-      // if (this.map.loaded()) {
+      if (this.map.loaded()) {
         const lng = position.coords.longitude;
         const lat = position.coords.latitude;
         console.log('Your current position is:');
@@ -58,7 +52,7 @@ export default class extends Controller {
             // customMarker.style.backgroundSize = "contain"
             customMarker.style.width = "25px"
             customMarker.style.height = "25px"
-​
+
             // Pass the element as an argument to the new marker
             new mapboxgl.Marker(customMarker)
               .setLngLat([lng, lat])
@@ -66,15 +60,15 @@ export default class extends Controller {
               .addTo(this.map)
             this.popItUp();
           })
-      // }
+      }
     })
   }
-​
+
   popItUp() {
     document.querySelector(".marker.mapboxgl-marker.mapboxgl-marker-anchor-center").click();
   }
 }
-​
+
 function myLocation() {
   document.querySelector(".mapboxgl-ctrl-icon").click();
 }
