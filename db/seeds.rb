@@ -25,7 +25,7 @@ aid = Aid.new(name: "Asthma", description: " description ")
 aid.photo.attach(io: file, filename: "asthma", content_type: "image/png")
 aid.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666685353/sauce/wound-care_2x-1200x852_adyxtv.png")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666763683/sauce/wound-care_2x-1200x852_1_mwnjir.png")
 aid1 = Aid.new(name: "Bleeding", description: " description 1 ")
 aid1.photo.attach(io: file, filename: "bleeding", content_type: "image/png")
 aid1.save
@@ -35,19 +35,19 @@ aid2 = Aid.new(name: "Burns", description: " description 2 ")
 aid2.photo.attach(io: file, filename: "burns", content_type: "image/png")
 aid2.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087177/sauce/Drowning_o8jhbh.jpg")
-aid3 = Aid.new(name: "Drowning", description: " description 3 ")
-aid3.photo.attach(io: file, filename: "drowning", content_type: "image/jpg")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666764486/sauce/imgbin-bone-fracture-arm-arm-1RLHH6x2AFE9zFEZFuRLyGHZ8_prev_ui_rzzdwm.png")
+aid3 = Aid.new(name: "Fracture", description: " description 3 ")
+aid3.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
 aid3.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087184/sauce/Electric_Shock_cmyt9g.png")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666763487/sauce/360_F_362503772_Fts3Wdb3tPDmuXS5m2QgjZAHPWPlvgV1_s2kkzn.png")
 aid4 = Aid.new(name: "Electric Shock", description: " description 4 ")
 aid4.photo.attach(io: file, filename: "electric_shock", content_type: "image/png")
 aid4.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087203/sauce/Fracture_ny4dne.jpg")
-aid5 = Aid.new(name: "Fracture", description: " description 5 ")
-aid5.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666761765/sauce/upset-woman-and-man-feeling-abdominal-pain-4587256-3845877_cjfhbb.webp")
+aid5 = Aid.new(name: "Food Poisoning", description: " description 5 ")
+aid5.photo.attach(io: file, filename: "food_poisoning", content_type: "image/webp")
 aid5.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087216/sauce/Heart_Attack_gmnqx4.jpg")
@@ -55,19 +55,19 @@ aid6 = Aid.new(name: "Heart Attack", description: " description 6 ")
 aid6.photo.attach(io: file, filename: "heart_attack.", content_type: "image/jpg")
 aid6.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087230/sauce/Seizure_bsmnyx.jpg")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666761909/sauce/istockphoto-1334451714-612x612_oiu3hv.jpg")
 aid7 = Aid.new(name: "Seizure", description: " description 7 ")
 aid7.photo.attach(io: file, filename: "seizure", content_type: "image/jpg")
 aid7.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087241/sauce/Unconscious_bmjbj6.jpg")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666761511/sauce/woman-calling-mobile-help-to-young-unconscious-man-vector-illustration-white-background-97299893_ycl33f.jpg")
 aid8 = Aid.new(name: "Unconscious", description: " description 8 ")
 aid8.photo.attach(io: file, filename: "unconscious", content_type: "image/jpg")
 aid8.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666087800/sauce/Food_Poisoning_ayulxo.webp")
-aid9 = Aid.new(name: "Food Poisoning", description: " description 9 ")
-aid9.photo.attach(io: file, filename: "food_poisoning", content_type: "image/webp")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666760382/sauce/istockphoto-1163771797-612x612_szspto.jpg")
+aid9 = Aid.new(name: "Drowning", description: " description 9 ")
+aid9.photo.attach(io: file, filename: "drowning", content_type: "image/jpg")
 aid9.save
 
 puts "creating users"
