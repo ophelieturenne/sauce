@@ -1,25 +1,29 @@
-<h1>My first-aid guide</h1>
+<div class="container vh-100">
 
-<%# search_bar %>
-<%= form_with url: aids_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
+  <section id="aid">
+    <h2>My first-aid guide</h2>
+    <%# search_bar %>
+    <%= form_with url: aids_path, method: :get, class: "d-flex search_bar" do %>
+        <%= text_field_tag :query,
           params[:query],
-          class: "form-control",
-          placeholder: "Find the first aid guide you need..."
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-
-<%# OT_front %>
-<section id="aid">
-  <div class="container cat__cards">
-    <% @aids.each do |aid| %>
-      <%= link_to aid_path(aid) do %>
-        <div class="cat__card">
-          <%= aid.name %>
-          <%= cl_image_tag aid.photo.key, class:"aid-category-image", :crop => "fit" %>
-        </div>
-      <% end %>
+          class: "form-control search_icon",
+          placeholder: "   Search"
+        %>
+        <button name="button" type="submit" class="btn btn-flat inner_icon">
+          <i class="fas fa-search "></i>
+        </button>
     <% end %>
-  </div>
-</section>
+
+  <%# OT_front %>
+    <div class="container cat__cards">
+      <% @aids.each do |aid| %>
+        <%= link_to aid_path(aid) do %>
+          <div class="cat__card">
+            <%= aid.name %>
+            <%= cl_image_tag aid.photo.key, class:"aid-category-image", :crop => "fit" %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </section>
+</div>
