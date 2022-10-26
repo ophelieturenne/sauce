@@ -11,30 +11,28 @@
   </button>
 <% end %>
 
-<div class="container py-4 mb-3 vh-100">
-
-  <h2 class="mb-3">My Emergency numbers</h2>
-
-  <div class="row my-2">
+<%# OT_front %>
+<section id="default__emergency">
+  <div class="container cat__cards">
     <% @emergencies.each do |emergency| %>
-      <div class="col-md-4 mb-3" data-aos="zoom-in">
-        <div class="bg-white rounded shadow h-300 p-3">
+        <div class="<%= emergency.user == current_user ? "test" : "cat__card" %>  ">
           <h3><%= emergency.name %></h3>
-          <p><%= emergency.description %></p>
           <p><%= emergency.phone_number %></p>
-          <%= phone_to emergency.phone_number, "call", class: "btn-default" %>
           <% if emergency.user == current_user %>
             <%= sms_to emergency.phone_number, "Alert", class: "btn-default", body: "I need help" %>
             <%= link_to "Edit",  edit_emergency_path(emergency), class: "btn-default"%>
             <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this number"}, class: "btn-default" %>
-          <% end %> 
+          <% end %>
         </div>
-      </div>
-    <% end %>
-    
-    <%= link_to new_emergency_path do %>
-      <i class="fa-solid fa-circle-plus"></i>
     <% end %>
   </div>
+</section>
+
+    <div><h2>My list</h2>
+
+      <%= link_to new_emergency_path do %>
+        <i class="fa-solid fa-circle-plus"></i>
+      <% end %>
+    </div>
 
 </div>
