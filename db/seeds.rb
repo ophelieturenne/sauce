@@ -254,10 +254,10 @@ emergency4.save
 # quizz
 puts "creating quizz "
 
-quizz1 = Quizz.create(name: "asthma")
-quizz2 = Quizz.create(name: "bleeding")
-quizz3 = Quizz.create(name: "burns")
-quizz4 = Quizz.create(name: "seizure")
+quizz1 = Quizz.create(name: "Asthma")
+quizz2 = Quizz.create(name: "Bleeding")
+quizz3 = Quizz.create(name: "Burns")
+quizz4 = Quizz.create(name: "Seizure")
 
 puts "saving quizz file "
 quizz1.save
@@ -268,19 +268,25 @@ quizz4.save
 # question
 puts "creating question "
 # Asthma
-question1 = Question.create(name: "What is the first step to take in case of an asthma attack?", option1:"Smoke a cigarette", option2:"run 1km", option3:"sit the person upright", answer:"sit the person upright", quizz:quizz1)
-question2 = Question.create(name: "What is the second step to take in case of an asthma attack?", option1:"do cardio", option2:"use the reliever puffer", option3:"wave hand", answer:"use the reliever puffer", quizz:quizz1)
-question3 = Question.create(name: "What is the third step to take in case of an asthma attack?", option1:"talk loudly", option2:"Wait for minutes and use reliever puffer again", option3:"smile to the person", answer:"Wait for minutes and use reliever puffer again", quizz:quizz1)
+question1 = Question.create(name: "What is the first step to take in case of an asthma attack?", option1:"Smoke a cigarette", option2:"Run 1km", option3:"Sit the person", answer:"Sit the person", quizz:quizz1)
+question2 = Question.create(name: "What is the second step to take in case of an asthma attack?", option1:"Do cardio", option2:"Use reliever puffer", option3:"Wave hand", answer:"Use reliever puffer", quizz:quizz1)
+question3 = Question.create(name: "What is the third step to take in case of an asthma attack?", option1:"Talk loudly", option2:"Wait few minutes", option3:"Smile to the person", answer:"Wait few minutes", quizz:quizz1)
 
 # Bleeding
-question4 = Question.create(name: "What is the first step to take in case of bleeding?", option1:"wear protective first aid gloves", option2:"shake your hand", option3:"jump for 2 minutes", answer:"wear protective first aid gloves", quizz:quizz2)
-question5 = Question.create(name: "What is the second step to take in case of bleeding?", option1:"spray perfume on the wound", option2:"put your hand in hot water", option3:"apply a direct pressure to the wound", answer:"apply a direct pressure to the wound", quizz:quizz2)
-question6 = Question.create(name: "What is the third step to take in case of bleeding?", option1:"wait 1 week", option2:"go to a night club", option3:"call 999 or 112", answer:"call 999 or 112", quizz:quizz2)
+question4 = Question.create(name: "What is the first step to take in case of bleeding?", option1:"Wear protective gloves", option2:"Shake your hand", option3:"Jump for 2 minutes", answer:"Wear protective gloves", quizz:quizz2)
+question5 = Question.create(name: "What is the second step to take in case of bleeding?", option1:"Spray perfume on wound", option2:"Put hand in hot water", option3:"Apply direct pressure", answer:"Apply direct pressure", quizz:quizz2)
+question6 = Question.create(name: "What is the third step to take in case of bleeding?", option1:"Wait 1 week", option2:"Go to a night club", option3:"Call 999 or 112", answer:"Call 999 or 112", quizz:quizz2)
 
 # Burns
-question7 = Question.create(name: "What is the first step to take in case of burns", option1:"Put your hand in the freezer", option2:"Treat the burn under cool running water for 20 minutes", option3:"Put your hand in the microwave", answer:"Treat the burn under cool running water for 20 minutes", quizz:quizz3)
-question8 = Question.create(name: "What is the second step to take in case of burns", option1:"spray perfume on the wound", option2:"put your hand in hot water", option3:"Cool the burn after 20 minutes", answer:"Cool the burn after 20 minutes", quizz:quizz3)
-question9 = Question.create(name: "What is the third step to take in case of burns", option1:"Cover the burn with a loose plastic wrap", option2:"put salt on it", option3:"put sugar", answer:"Cover the burn with a loose plastic wrap", quizz:quizz3)
+question7 = Question.create(name: "What is the first step to take in case of burns?", option1:"Put hand in freezer", option2:"Treat the burn under water", option3:"Put hand in microwave", answer:"Treat the burn under water", quizz:quizz3)
+question8 = Question.create(name: "What is the second step to take in case of burns?", option1:"Spray perfume on wound", option2:"Put hand in hot water", option3:"Cool the burn", answer:"Cool the burn", quizz:quizz3)
+question9 = Question.create(name: "What is the third step to take in case of burns?", option1:"Cover the burn", option2:"Put salt on it", option3:"Put sugar", answer:"Cover the burn", quizz:quizz3)
+
+# Seizure
+question10 = Question.create(name: "What is the first step to take in case of seizure?", option1:"Run away", option2:"Lay on his side", option3:"Look at the person", answer:"Lay on his side", quizz:quizz4)
+question11 = Question.create(name: "What is the second step to take in case of seizure?", option1:"Don't put anything on mouth", option2:"Drink water", option3:"Scream loudly", answer:"Don't put anything on mouth", quizz:quizz4)
+question11 = Question.create(name: "What is the third step to take in case of seizure?", option1:"Wave hand", option2:"Throw water to person", option3:"Call for help immediately", answer:"Call for help immediately", quizz:quizz4)
+
 
 puts "saving question file "
 # question1.save
