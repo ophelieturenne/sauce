@@ -37,7 +37,7 @@ aid2.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666764486/sauce/imgbin-bone-fracture-arm-arm-1RLHH6x2AFE9zFEZFuRLyGHZ8_prev_ui_rzzdwm.png")
 aid3 = Aid.new(name: "Fracture", description: " description 3 ")
-aid3.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
+aid3.photo.attach(io: file, filename: "fracture", content_type: "image/png")
 aid3.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666763487/sauce/360_F_362503772_Fts3Wdb3tPDmuXS5m2QgjZAHPWPlvgV1_s2kkzn.png")
@@ -76,29 +76,29 @@ user1.save
 
 puts "creating steps"
 # steps for aid (asthma)
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666163143/sauce/Asthma/Screenshot_122_rmp6lk.png")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666865461/sauce/Asthma/man-sitting-chair_310x230_rpmtut.webp")
 step1 = Step.new(aid: aid, position: 1, description: "Sit the person upright.")
-step1.photo.attach(io: file, filename: "asthma", content_type: "image/png")
+step1.photo.attach(io: file, filename: "asthma", content_type: "image/webp")
 step1.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666163994/sauce/Asthma/Screenshot_122_cezoas.png")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666865513/sauce/Asthma/inhaler-icon-breathing_310x230_ccd4ub.webp")
 step2 = Step.new(aid: aid, position: 2, description: "Give 4 separate puffs of blue/grey reliever puffer
 – Shake puffer
 – Put 1 puff into spacer
 – Take 4 breaths from spacer
 Repeat until 4 puffs have been taken
 Remember: shake, 1 puff, 4 breaths.")
-step2.photo.attach(io: file, filename: "asthma", content_type: "image/png")
+step2.photo.attach(io: file, filename: "asthma", content_type: "image/webp")
 step2.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666163745/sauce/Asthma/Screenshot_122_sxd7ei.png")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666865523/sauce/Asthma/4_min_1_310x230_ydwqno.jpg")
 step3 = Step.new(aid: aid, position: 3, description: "Wait 4 minutes
 If there is no improvement, give 4 more
 separate puffs of blue/grey reliever as above ")
-step3.photo.attach(io: file, filename: "asthma", content_type: "image/png")
+step3.photo.attach(io: file, filename: "asthma", content_type: "image/jpg")
 step3.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666163864/sauce/Asthma/Screenshot_122_maxw2h.png")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666865532/sauce/Asthma/calling_310x230_n4ppbw.png")
 step4 = Step.new(aid: aid, position: 4, description: "If there is still no improvement dial
 Triple Zero (000) for an ambulance
 Keep giving 4 separate puffs every 4 minutes
@@ -177,9 +177,6 @@ file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666252555/s
 step2 = Step.new(aid: aid5, position: 2, description: "Wash hand more so that to prevent the spread of the infection.")
 step2.photo.attach(io: file, filename: "food_poisoning", content_type: "image/jpg")
 step2.save
-
-
-
 
 # steps for aid6 (heart attack)
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666251637/sauce/Heart%20Attack/Heart_disease_uqn7kb.jpg")
@@ -271,8 +268,6 @@ puts "saving quizz file "
 #quizz3.save
 #quizz4.save
 
-
-
 # question
 puts "creating question"
 
@@ -325,4 +320,3 @@ puts "saving question file "
 # question2.save
 # question3.save
 # question4.save
-
