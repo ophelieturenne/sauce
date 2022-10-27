@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title><%= meta_title %></title>
     <meta name="description" content="<%= meta_description %>">
     <%# flavicons %>
     <%# <%= favicon_link_tag %>
-
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -24,7 +25,11 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <%# <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> %>
+    <%# PWA %>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
+    <%= render 'shared/ios_pwa_links' %>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>

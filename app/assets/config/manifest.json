@@ -1,5 +1,8 @@
 {
- "name": "App",
+ "background_color": "white",
+ "description": "Sauce - You have an emergency? sauce is here for you!",
+ "display": "fullscreen",
+ "name": "Sauce",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
