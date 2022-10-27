@@ -259,9 +259,10 @@ quizz2 = Quizz.create(name: "Bleeding")
 quizz3 = Quizz.create(name: "Burns")
 quizz4 = Quizz.create(name: "Seizure")
 quizz5 = Quizz.create(name: "Fracture")
-quizz6 = Quizz.create(name: "Elec-shock")
+quizz6 = Quizz.create(name: "Elec-Shock")
 quizz7 = Quizz.create(name: "Poisoning")
-
+quizz8 = Quizz.create(name: "Heart-Attack")
+quizz9 = Quizz.create(name: "Unconscious")
 
 puts "saving quizz file "
 #quizz1.save
@@ -304,6 +305,13 @@ question15 = Question.create(name: "What is the second step to take in case of e
 # Food Poisoning
 question16 = Question.create(name: "What is the first step to take in case of Food Poisoning?", option1:"Eat fast food", option2:"Drink water", option3:"Scream", answer:"Drink water", quizz:quizz7)
 question17 = Question.create(name: "What is the second step to take in case of Food Poisoning?", option1:"Dance", option2:"Check pulse", option3:"Wash hand", answer:"Wash hand", quizz:quizz7)
+
+# Heart-Attack
+question18 = Question.create(name: "What is the first step to take in case of heart-attack?", option1:"Cardiac massage", option2:"Drink water", option3:"Scream", answer:"Cardiac massage", quizz:quizz8)
+question19 = Question.create(name: "What is the second step to take in case of heart-attack?", option1:"Dance", option2:"Call for help", option3:"Pour water", answer:"Call for help", quizz:quizz8)
+
+# Unconscious
+question20 = Question.create(name: "What is the first step to take in case of unconscious?", option1:"Leg's raise above heart level", option2:"Run away", option3:"Scream", answer:"Leg's raise above heart level", quizz:quizz9)
 
 puts "saving question file "
 # question1.save
