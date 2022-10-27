@@ -46,7 +46,7 @@ aid4.photo.attach(io: file, filename: "electric_shock", content_type: "image/png
 aid4.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666761765/sauce/upset-woman-and-man-feeling-abdominal-pain-4587256-3845877_cjfhbb.webp")
-aid5 = Aid.new(name: "Food Poisoning", description: " description 5 ")
+aid5 = Aid.new(name: "F-Poisoning", description: " description 5 ")
 aid5.photo.attach(io: file, filename: "food_poisoning", content_type: "image/webp")
 aid5.save
 
@@ -238,9 +238,9 @@ puts "creating emergency"
 
 admin = User.create(email: "admin@test.com", password: "123456")
 emergency1 = Emergency.create(name: "Police Direct Line", phone_number: "999", description: "call Samu", ispublic: true, user: admin)
-emergency2 = Emergency.create(name: "Samu (Ambulance)", phone_number: "114", description: "call Samu", ispublic: true, user: admin)
+emergency2 = Emergency.create(name: "Samu", phone_number: "114", description: "call Samu", ispublic: true, user: admin)
 emergency3 = Emergency.create(name: "Fire Services", phone_number: "115", description: "call Fire Station", ispublic: true, user: admin)
-emergency4 = Emergency.create(name: "Police Information Room", phone_number: "2080034",description: "call Coast Guard", ispublic: true, user: admin)
+emergency4 = Emergency.create(name: "Police Info", phone_number: "2080034",description: "call Coast Guard", ispublic: true, user: admin)
 
 puts "saving emergency file "
 emergency1.save

@@ -15,14 +15,23 @@
 
     <div class="cat__cards">
       <% @emergencies.each do |emergency| %>
-          <div class="<%= emergency.user == current_user ? "cat__card" : "cat__c" %>  ">
+          <div class="<%= emergency.user == current_user ? "cat__card" : "cat__c" %> ">
             <h3><%= emergency.name %></h3>
             <p><%= emergency.phone_number %></p>
             <%= phone_to emergency.phone_number, "call", class:"#{ emergency.ispublic ? "btn-default" : "btn-new" }"%>
             <% if emergency.user == current_user %>
-              <%= sms_to emergency.phone_number, "Alert", class: "btn-new", body: "I need help" %>
-              <%= link_to "Edit",  edit_emergency_path(emergency), class: "btn-new"%>
-              <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this number"}, class: "btn-new" %>
+              <%# <%= sms_to emergency.phone_number, "Alert", class: "btn-new", body: "I need help" %>
+              <%# <%= link_to "Edit",  edit_emergency_path(emergency), class: "btn-new"%>
+              <%# <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this number"}, class: "btn-new" %>
+              <%= sms_to emergency.phone_number, class: "icon_e" do %>
+                <i class="fa-solid fa-message"></i>
+              <% end %>
+              <%= link_to edit_emergency_path(emergency), class: "icon_e" do %>
+                <i class="fa-solid fa-pen-to-square"></i>
+              <% end %>
+              <%= link_to emergency_path(emergency), class: "icon_e", data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this number"} do %>
+                <i class="fa-solid fa-trash"></i>
+              <% end %>
             <% end %>
           </div>
       <% end %>
