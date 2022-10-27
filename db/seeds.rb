@@ -263,17 +263,19 @@ quizz6 = Quizz.create(name: "Elec-Shock")
 quizz7 = Quizz.create(name: "Poisoning")
 quizz8 = Quizz.create(name: "Heart-Attack")
 quizz9 = Quizz.create(name: "Unconscious")
+quizz10 = Quizz.create(name: "Drowning")
 
 puts "saving quizz file "
 #quizz1.save
 #quizz2.save
 #quizz3.save
 #quizz4.save
-#quizz5.save
+
 
 
 # question
-puts "creating question "
+puts "creating question"
+
 # Asthma
 question1 = Question.create(name: "What is the first step to take in case of an asthma attack?", option1:"Smoke a cigarette", option2:"Run 1km", option3:"Sit the person", answer:"Sit the person", quizz:quizz1)
 question2 = Question.create(name: "What is the second step to take in case of an asthma attack?", option1:"Do cardio", option2:"Use reliever puffer", option3:"Wave hand", answer:"Use reliever puffer", quizz:quizz1)
@@ -292,34 +294,35 @@ question9 = Question.create(name: "What is the third step to take in case of bur
 # Seizure
 question10 = Question.create(name: "What is the first step to take in case of seizure?", option1:"Run away", option2:"Lay on his side", option3:"Look at the person", answer:"Lay on his side", quizz:quizz4)
 question11 = Question.create(name: "What is the second step to take in case of seizure?", option1:"Don't put anything on mouth", option2:"Drink water", option3:"Scream loudly", answer:"Don't put anything on mouth", quizz:quizz4)
-question11 = Question.create(name: "What is the third step to take in case of seizure?", option1:"Wave hand", option2:"Throw water to person", option3:"Call for help immediately", answer:"Call for help immediately", quizz:quizz4)
+question12 = Question.create(name: "What is the third step to take in case of seizure?", option1:"Wave hand", option2:"Throw water to person", option3:"Call for help immediately", answer:"Call for help immediately", quizz:quizz4)
 
 # Fracture
-question12 = Question.create(name: "What is the first step to take in case of fracture?", option1:"Stay still", option2:"Move the broken bones", option3:"Jump highly", answer:"Stay still", quizz:quizz5)
-question13 = Question.create(name: "What is the second step to take in case of fracture?", option1:"Dance", option2:"Apply Cold", option3:"Scream loudly", answer:"Apply Cold", quizz:quizz5)
+question13 = Question.create(name: "What is the first step to take in case of fracture?", option1:"Stay still", option2:"Move the broken bones", option3:"Jump highly", answer:"Stay still", quizz:quizz5)
+question14 = Question.create(name: "What is the second step to take in case of fracture?", option1:"Dance", option2:"Apply Cold", option3:"Scream loudly", answer:"Apply Cold", quizz:quizz5)
 
 # Electric shock
-question14 = Question.create(name: "What is the first step to take in case of electric-shock?", option1:"Run away", option2:"Ignore the person", option3:"Push away electric wire", answer:"Push away electric wire", quizz:quizz6)
-question15 = Question.create(name: "What is the second step to take in case of electric-shock?", option1:"Dance", option2:"Check pulse", option3:"Scream loudly", answer:"Check pulse", quizz:quizz6)
+question15 = Question.create(name: "What is the first step to take in case of electric-shock?", option1:"Run away", option2:"Ignore the person", option3:"Push away electric wire", answer:"Push away electric wire", quizz:quizz6)
+question16 = Question.create(name: "What is the second step to take in case of electric-shock?", option1:"Dance", option2:"Check pulse", option3:"Scream loudly", answer:"Check pulse", quizz:quizz6)
 
 # Food Poisoning
-question16 = Question.create(name: "What is the first step to take in case of Food Poisoning?", option1:"Eat fast food", option2:"Drink water", option3:"Scream", answer:"Drink water", quizz:quizz7)
-question17 = Question.create(name: "What is the second step to take in case of Food Poisoning?", option1:"Dance", option2:"Check pulse", option3:"Wash hand", answer:"Wash hand", quizz:quizz7)
+question17 = Question.create(name: "What is the first step to take in case of Food Poisoning?", option1:"Eat fast food", option2:"Drink water", option3:"Scream", answer:"Drink water", quizz:quizz7)
+question18 = Question.create(name: "What is the second step to take in case of Food Poisoning?", option1:"Dance", option2:"Check pulse", option3:"Wash hand", answer:"Wash hand", quizz:quizz7)
 
 # Heart-Attack
-question18 = Question.create(name: "What is the first step to take in case of heart-attack?", option1:"Cardiac massage", option2:"Drink water", option3:"Scream", answer:"Cardiac massage", quizz:quizz8)
-question19 = Question.create(name: "What is the second step to take in case of heart-attack?", option1:"Dance", option2:"Call for help", option3:"Pour water", answer:"Call for help", quizz:quizz8)
+question19 = Question.create(name: "What is the first step to take in case of heart-attack?", option1:"Cardiac massage", option2:"Drink water", option3:"Scream", answer:"Cardiac massage", quizz:quizz8)
+question20 = Question.create(name: "What is the second step to take in case of heart-attack?", option1:"Dance", option2:"Call for help", option3:"Pour water", answer:"Call for help", quizz:quizz8)
 
 # Unconscious
-question20 = Question.create(name: "What is the first step to take in case of unconscious?", option1:"Leg's raise above heart level", option2:"Run away", option3:"Scream", answer:"Leg's raise above heart level", quizz:quizz9)
+question21 = Question.create(name: "What is the first step to take in case of unconscious?", option1:"Leg's raise above heart level", option2:"Run away", option3:"Scream", answer:"Leg's raise above heart level", quizz:quizz9)
+
+# Drowning
+question22 = Question.create(name: "What is the first step to take in case of drowning?", option1:"Catch any object", option2:"Run away", option3:"Scream", answer:"Catch any object", quizz:quizz10)
+question23 = Question.create(name: "What is the second step to take in case of drowning?", option1:"Fishing", option2:"Push his chest", option3:"Pour water", answer:"Push his chest", quizz:quizz10)
+question24 = Question.create(name: "What is the third step to take in case of drowning?", option1:"Party", option2:"Smoke a cigarette", option3:"Mouth to mouth", answer:"Mouth to mouth", quizz:quizz10)
 
 puts "saving question file "
 # question1.save
 # question2.save
 # question3.save
 # question4.save
-# question5.save
-# question6.save
-# question7.save
-# question8.save
-# question9.save
+
