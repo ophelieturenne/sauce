@@ -258,6 +258,7 @@ quizz1 = Quizz.create(name: "Asthma")
 quizz2 = Quizz.create(name: "Bleeding")
 quizz3 = Quizz.create(name: "Burns")
 quizz4 = Quizz.create(name: "Seizure")
+quizz5 = Quizz.create(name: "Fracture")
 
 puts "saving quizz file "
 quizz1.save
@@ -286,6 +287,11 @@ question9 = Question.create(name: "What is the third step to take in case of bur
 question10 = Question.create(name: "What is the first step to take in case of seizure?", option1:"Run away", option2:"Lay on his side", option3:"Look at the person", answer:"Lay on his side", quizz:quizz4)
 question11 = Question.create(name: "What is the second step to take in case of seizure?", option1:"Don't put anything on mouth", option2:"Drink water", option3:"Scream loudly", answer:"Don't put anything on mouth", quizz:quizz4)
 question11 = Question.create(name: "What is the third step to take in case of seizure?", option1:"Wave hand", option2:"Throw water to person", option3:"Call for help immediately", answer:"Call for help immediately", quizz:quizz4)
+
+# Fracture
+question12 = Question.create(name: "What is the first step to take in case of fracture?", option1:"Stay still", option2:"Move the broken bones", option3:"Jump highly", answer:"Stay still", quizz:quizz5)
+question13 = Question.create(name: "What is the second step to take in case of fracture?", option1:"Dance", option2:"Apply Cold", option3:"Scream loudly", answer:"Apply Cold", quizz:quizz5)
+
 
 
 puts "saving question file "
