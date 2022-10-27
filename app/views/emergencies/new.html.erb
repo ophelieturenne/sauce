@@ -1,5 +1,10 @@
-<%= simple_form_for ([@emergency]) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :phone_number %>
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
+<div class="container vh-100">
+  <section id="create_em">
+    <h2>My new contact</h2>
+    <%= simple_form_for ([@emergency]) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :phone_number %>
+      <%= f.submit id: 'btn' %>
+    <% end %>
+  </section>
+</div>
