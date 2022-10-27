@@ -1,31 +1,31 @@
 <div class="nav__footer">
   <ul>
     <li>
-      <%= link_to emergencies_path, class: "n_icon" do %>
+      <%= link_to emergencies_path, class: "n_icon", style:"#{'color:#16f943;'if request.original_fullpath == emergencies_path}" do %>
         <i class="fa-solid fa-phone"></i>
       <% end %>
     </li>
 
     <li>
-      <%= link_to aids_path, class: "n_icon" do %>
+      <%= link_to aids_path, class: "n_icon", style:"#{'color:#16f943;'if request.original_fullpath == aids_path}" do %>
         <i class="fa-solid fa-kit-medical"></i>
       <% end %>
     </li>
 
     <li>
-      <%= link_to root_path, class: "n_icon" do %>
+      <%= link_to root_path, class: "n_icon" , style:"#{'color:#16f943;'if request.original_fullpath == root_path}" do %>
         <i class="fa-solid fa-house"></i>
       <% end %>
     </li>
 
     <li>
-      <%= link_to locations_path, class: "n_icon" do %>
+      <%= link_to locations_path, class: "n_icon" , style:"#{'color:#16f943;'if request.original_fullpath == locations_path}" do %>
         <i class="fa-solid fa-location-dot"></i>
       <% end %>
     </li>
 
     <li>
-      <%= link_to quizzs_path, class: "n_icon" do %>
+      <%= link_to quizzs_path, class: "n_icon", style:"#{'color:#16f943;'if request.original_fullpath == quizzs_path}" do %>
         <i class="fa-solid fa-lightbulb"></i>
       <% end %>
     </li>
