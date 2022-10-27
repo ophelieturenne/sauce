@@ -1,0 +1,5 @@
+meta_product_name: "Sauce"
+meta_title: "Sauce - You have an emergency? sauce is here for you!"
+meta_description: "Sauce is a mobile application to use in case of emergency, for example: to call emergency numbers, your family or friends."
+meta_image: "sauce_logo.jpg" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
