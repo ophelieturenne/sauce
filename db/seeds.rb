@@ -37,7 +37,7 @@ aid2.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666764486/sauce/imgbin-bone-fracture-arm-arm-1RLHH6x2AFE9zFEZFuRLyGHZ8_prev_ui_rzzdwm.png")
 aid3 = Aid.new(name: "Fracture", description: " description 3 ")
-aid3.photo.attach(io: file, filename: "fracture", content_type: "image/jpg")
+aid3.photo.attach(io: file, filename: "fracture", content_type: "image/png")
 aid3.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666763487/sauce/360_F_362503772_Fts3Wdb3tPDmuXS5m2QgjZAHPWPlvgV1_s2kkzn.png")
@@ -76,29 +76,29 @@ user1.save
 
 puts "creating steps"
 # steps for aid (asthma)
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666163143/sauce/Asthma/Screenshot_122_rmp6lk.png")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666865461/sauce/Asthma/man-sitting-chair_310x230_rpmtut.webp")
 step1 = Step.new(aid: aid, position: 1, description: "Sit the person upright.")
-step1.photo.attach(io: file, filename: "asthma", content_type: "image/png")
+step1.photo.attach(io: file, filename: "asthma", content_type: "image/webp")
 step1.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666163994/sauce/Asthma/Screenshot_122_cezoas.png")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666865513/sauce/Asthma/inhaler-icon-breathing_310x230_ccd4ub.webp")
 step2 = Step.new(aid: aid, position: 2, description: "Give 4 separate puffs of blue/grey reliever puffer
 – Shake puffer
 – Put 1 puff into spacer
 – Take 4 breaths from spacer
 Repeat until 4 puffs have been taken
 Remember: shake, 1 puff, 4 breaths.")
-step2.photo.attach(io: file, filename: "asthma", content_type: "image/png")
+step2.photo.attach(io: file, filename: "asthma", content_type: "image/webp")
 step2.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666163745/sauce/Asthma/Screenshot_122_sxd7ei.png")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666865523/sauce/Asthma/4_min_1_310x230_ydwqno.jpg")
 step3 = Step.new(aid: aid, position: 3, description: "Wait 4 minutes
 If there is no improvement, give 4 more
 separate puffs of blue/grey reliever as above ")
-step3.photo.attach(io: file, filename: "asthma", content_type: "image/png")
+step3.photo.attach(io: file, filename: "asthma", content_type: "image/jpg")
 step3.save
 
-file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666163864/sauce/Asthma/Screenshot_122_maxw2h.png")
+file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666865532/sauce/Asthma/calling_310x230_n4ppbw.png")
 step4 = Step.new(aid: aid, position: 4, description: "If there is still no improvement dial
 Triple Zero (000) for an ambulance
 Keep giving 4 separate puffs every 4 minutes
@@ -178,9 +178,6 @@ step2 = Step.new(aid: aid5, position: 2, description: "Wash hand more so that to
 step2.photo.attach(io: file, filename: "food_poisoning", content_type: "image/jpg")
 step2.save
 
-
-
-
 # steps for aid6 (heart attack)
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666251637/sauce/Heart%20Attack/Heart_disease_uqn7kb.jpg")
 step1 = Step.new(aid: aid6, position: 1, description: "The person that will lay down need some space to breath,so keep a distance and try to do a cardiac message.")
@@ -254,41 +251,72 @@ emergency4.save
 # quizz
 puts "creating quizz "
 
-quizz1 = Quizz.create(name: "asthma")
-quizz2 = Quizz.create(name: "bleeding")
-quizz3 = Quizz.create(name: "burns")
-quizz4 = Quizz.create(name: "seizure")
+quizz1 = Quizz.create(name: "Asthma")
+quizz2 = Quizz.create(name: "Bleeding")
+quizz3 = Quizz.create(name: "Burns")
+quizz4 = Quizz.create(name: "Seizure")
+quizz5 = Quizz.create(name: "Fracture")
+quizz6 = Quizz.create(name: "Elec-Shock")
+quizz7 = Quizz.create(name: "Poisoning")
+quizz8 = Quizz.create(name: "Heart-Attack")
+quizz9 = Quizz.create(name: "Unconscious")
+quizz10 = Quizz.create(name: "Drowning")
 
 puts "saving quizz file "
-quizz1.save
-quizz2.save
-quizz3.save
-quizz4.save
+#quizz1.save
+#quizz2.save
+#quizz3.save
+#quizz4.save
 
 # question
-puts "creating question "
+puts "creating question"
+
 # Asthma
-question1 = Question.create(name: "What is the first step to take in case of an asthma attack?", option1:"Smoke a cigarette", option2:"run 1km", option3:"sit the person upright", answer:"sit the person upright", quizz:quizz1)
-question2 = Question.create(name: "What is the second step to take in case of an asthma attack?", option1:"do cardio", option2:"use the reliever puffer", option3:"wave hand", answer:"use the reliever puffer", quizz:quizz1)
-question3 = Question.create(name: "What is the third step to take in case of an asthma attack?", option1:"talk loudly", option2:"Wait for minutes and use reliever puffer again", option3:"smile to the person", answer:"Wait for minutes and use reliever puffer again", quizz:quizz1)
+question1 = Question.create(name: "What is the first step to take in case of an asthma attack?", option1:"Smoke a cigarette", option2:"Run 1km", option3:"Sit the person", answer:"Sit the person", quizz:quizz1)
+question2 = Question.create(name: "What is the second step to take in case of an asthma attack?", option1:"Do cardio", option2:"Use reliever puffer", option3:"Wave hand", answer:"Use reliever puffer", quizz:quizz1)
+question3 = Question.create(name: "What is the third step to take in case of an asthma attack?", option1:"Talk loudly", option2:"Wait few minutes", option3:"Smile to the person", answer:"Wait few minutes", quizz:quizz1)
 
 # Bleeding
-question4 = Question.create(name: "What is the first step to take in case of bleeding?", option1:"wear protective first aid gloves", option2:"shake your hand", option3:"jump for 2 minutes", answer:"wear protective first aid gloves", quizz:quizz2)
-question5 = Question.create(name: "What is the second step to take in case of bleeding?", option1:"spray perfume on the wound", option2:"put your hand in hot water", option3:"apply a direct pressure to the wound", answer:"apply a direct pressure to the wound", quizz:quizz2)
-question6 = Question.create(name: "What is the third step to take in case of bleeding?", option1:"wait 1 week", option2:"go to a night club", option3:"call 999 or 112", answer:"call 999 or 112", quizz:quizz2)
+question4 = Question.create(name: "What is the first step to take in case of bleeding?", option1:"Wear protective gloves", option2:"Shake your hand", option3:"Jump for 2 minutes", answer:"Wear protective gloves", quizz:quizz2)
+question5 = Question.create(name: "What is the second step to take in case of bleeding?", option1:"Spray perfume on wound", option2:"Put hand in hot water", option3:"Apply direct pressure", answer:"Apply direct pressure", quizz:quizz2)
+question6 = Question.create(name: "What is the third step to take in case of bleeding?", option1:"Wait 1 week", option2:"Go to a night club", option3:"Call 999 or 112", answer:"Call 999 or 112", quizz:quizz2)
 
 # Burns
-question7 = Question.create(name: "What is the first step to take in case of burns", option1:"Put your hand in the freezer", option2:"Treat the burn under cool running water for 20 minutes", option3:"Put your hand in the microwave", answer:"Treat the burn under cool running water for 20 minutes", quizz:quizz3)
-question8 = Question.create(name: "What is the second step to take in case of burns", option1:"spray perfume on the wound", option2:"put your hand in hot water", option3:"Cool the burn after 20 minutes", answer:"Cool the burn after 20 minutes", quizz:quizz3)
-question9 = Question.create(name: "What is the third step to take in case of burns", option1:"Cover the burn with a loose plastic wrap", option2:"put salt on it", option3:"put sugar", answer:"Cover the burn with a loose plastic wrap", quizz:quizz3)
+question7 = Question.create(name: "What is the first step to take in case of burns?", option1:"Put hand in freezer", option2:"Treat the burn under water", option3:"Put hand in microwave", answer:"Treat the burn under water", quizz:quizz3)
+question8 = Question.create(name: "What is the second step to take in case of burns?", option1:"Spray perfume on wound", option2:"Put hand in hot water", option3:"Cool the burn", answer:"Cool the burn", quizz:quizz3)
+question9 = Question.create(name: "What is the third step to take in case of burns?", option1:"Cover the burn", option2:"Put salt on it", option3:"Put sugar", answer:"Cover the burn", quizz:quizz3)
+
+# Seizure
+question10 = Question.create(name: "What is the first step to take in case of seizure?", option1:"Run away", option2:"Lay on his side", option3:"Look at the person", answer:"Lay on his side", quizz:quizz4)
+question11 = Question.create(name: "What is the second step to take in case of seizure?", option1:"Don't put anything on mouth", option2:"Drink water", option3:"Scream loudly", answer:"Don't put anything on mouth", quizz:quizz4)
+question12 = Question.create(name: "What is the third step to take in case of seizure?", option1:"Wave hand", option2:"Throw water to person", option3:"Call for help immediately", answer:"Call for help immediately", quizz:quizz4)
+
+# Fracture
+question13 = Question.create(name: "What is the first step to take in case of fracture?", option1:"Stay still", option2:"Move the broken bones", option3:"Jump highly", answer:"Stay still", quizz:quizz5)
+question14 = Question.create(name: "What is the second step to take in case of fracture?", option1:"Dance", option2:"Apply Cold", option3:"Scream loudly", answer:"Apply Cold", quizz:quizz5)
+
+# Electric shock
+question15 = Question.create(name: "What is the first step to take in case of electric-shock?", option1:"Run away", option2:"Ignore the person", option3:"Push away electric wire", answer:"Push away electric wire", quizz:quizz6)
+question16 = Question.create(name: "What is the second step to take in case of electric-shock?", option1:"Dance", option2:"Check pulse", option3:"Scream loudly", answer:"Check pulse", quizz:quizz6)
+
+# Food Poisoning
+question17 = Question.create(name: "What is the first step to take in case of Food Poisoning?", option1:"Eat fast food", option2:"Drink water", option3:"Scream", answer:"Drink water", quizz:quizz7)
+question18 = Question.create(name: "What is the second step to take in case of Food Poisoning?", option1:"Dance", option2:"Check pulse", option3:"Wash hand", answer:"Wash hand", quizz:quizz7)
+
+# Heart-Attack
+question19 = Question.create(name: "What is the first step to take in case of heart-attack?", option1:"Cardiac massage", option2:"Drink water", option3:"Scream", answer:"Cardiac massage", quizz:quizz8)
+question20 = Question.create(name: "What is the second step to take in case of heart-attack?", option1:"Dance", option2:"Call for help", option3:"Pour water", answer:"Call for help", quizz:quizz8)
+
+# Unconscious
+question21 = Question.create(name: "What is the first step to take in case of unconscious?", option1:"Leg's raise above heart level", option2:"Run away", option3:"Scream", answer:"Leg's raise above heart level", quizz:quizz9)
+
+# Drowning
+question22 = Question.create(name: "What is the first step to take in case of drowning?", option1:"Catch any object", option2:"Run away", option3:"Scream", answer:"Catch any object", quizz:quizz10)
+question23 = Question.create(name: "What is the second step to take in case of drowning?", option1:"Fishing", option2:"Push his chest", option3:"Pour water", answer:"Push his chest", quizz:quizz10)
+question24 = Question.create(name: "What is the third step to take in case of drowning?", option1:"Party", option2:"Smoke a cigarette", option3:"Mouth to mouth", answer:"Mouth to mouth", quizz:quizz10)
 
 puts "saving question file "
 # question1.save
 # question2.save
 # question3.save
 # question4.save
-# question5.save
-# question6.save
-# question7.save
-# question8.save
-# question9.save
