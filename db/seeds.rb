@@ -82,27 +82,17 @@ step1.photo.attach(io: file, filename: "asthma", content_type: "image/webp")
 step1.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666865513/sauce/Asthma/inhaler-icon-breathing_310x230_ccd4ub.webp")
-step2 = Step.new(aid: aid, position: 2, description: "Give 4 separate puffs of blue/grey reliever puffer
-– Shake puffer
-– Put 1 puff into spacer
-– Take 4 breaths from spacer
-Repeat until 4 puffs have been taken
-Remember: shake, 1 puff, 4 breaths.")
+step2 = Step.new(aid: aid, position: 2, description: "Give 4 separate puffs of reliever puffer. Take 4 breaths from spacer. Repeat until 4 puffs have been taken. Remember: shake, 1 puff, 4 breaths.")
 step2.photo.attach(io: file, filename: "asthma", content_type: "image/webp")
 step2.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666865523/sauce/Asthma/4_min_1_310x230_ydwqno.jpg")
-step3 = Step.new(aid: aid, position: 3, description: "Wait 4 minutes
-If there is no improvement, give 4 more
-separate puffs of blue/grey reliever as above ")
+step3 = Step.new(aid: aid, position: 3, description: "Wait 4 minutes. Still no improvement?, give 4 moreseparate puffs of reliever.")
 step3.photo.attach(io: file, filename: "asthma", content_type: "image/jpg")
 step3.save
 
 file = URI.open("https://res.cloudinary.com/dvp1v2dej/image/upload/v1666865532/sauce/Asthma/calling_310x230_n4ppbw.png")
-step4 = Step.new(aid: aid, position: 4, description: "If there is still no improvement dial
-Triple Zero (000) for an ambulance
-Keep giving 4 separate puffs every 4 minutes
-until emergency assistance arrives. ")
+step4 = Step.new(aid: aid, position: 4, description: "Call SAMU (114) in your emergency contact. Keep giving 4 separate puffs every 4 minutes,until emergency assistance arrives.")
 step4.photo.attach(io: file, filename: "asthma", content_type: "image/png")
 step4.save
 
@@ -237,16 +227,24 @@ step4.save
 puts "creating emergency"
 
 admin = User.create(email: "admin@test.com", password: "123456")
-emergency1 = Emergency.create(name: "Police Direct Line", phone_number: "999", description: "call Samu", ispublic: true, user: admin)
-emergency2 = Emergency.create(name: "Samu", phone_number: "114", description: "call Samu", ispublic: true, user: admin)
+emergency1 = Emergency.create(name: "Police", phone_number: "999", description: "call Samu", ispublic: true, user: admin)
+emergency2 = Emergency.create(name: "Samu", phone_number: "58026434", description: "call Samu", ispublic: true, user: admin)
 emergency3 = Emergency.create(name: "Fire Services", phone_number: "115", description: "call Fire Station", ispublic: true, user: admin)
 emergency4 = Emergency.create(name: "Police Info", phone_number: "2080034",description: "call Coast Guard", ispublic: true, user: admin)
+emergency5 = Emergency.create(name: "Crime stoppers", phone_number: "148", description: "call", ispublic: true, user: admin)
+emergency6 = Emergency.create(name: "Toll free", phone_number: "8002345", description: "call", ispublic: true, user: admin)
+emergency7 = Emergency.create(name: "Traffic", phone_number: "2118434", description: "call", ispublic: true, user: admin)
+emergency8 = Emergency.create(name: "Family unit", phone_number: "2102116",description: "call", ispublic: true, user: admin)
 
 puts "saving emergency file "
 emergency1.save
 emergency2.save
 emergency3.save
 emergency4.save
+emergency5.save
+emergency6.save
+emergency7.save
+emergency8.save
 
 # quizz
 puts "creating quizz "
