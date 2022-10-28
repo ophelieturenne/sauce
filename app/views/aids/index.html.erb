@@ -15,7 +15,7 @@
     <% end %>
 
   <%# OT_front %>
-    <div class="container cat__cards">
+    <section class="cat__cards">
       <% @aids.each do |aid| %>
         <%= link_to aid_path(aid) do %>
           <div class="cat__card">
@@ -24,6 +24,8 @@
           </div>
         <% end %>
       <% end %>
-    </div>
+    </section>
+
+
   </section>
 </div>

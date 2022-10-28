@@ -1,14 +1,13 @@
-<h5><%= @aid.name%></h5>
-
- <div class="step-aid">
-  <% @steps.each do |step| %>
-  <div class="product">
-    <% step.photo.key %>
-      <%= cl_image_tag step.photo.key, class:"step-aid-image", :crop => "fit"%>
-     <div class="product-text">
-      STEP:  <a><%= step.position %></a><br>
-      <%= step.description %>
-      </div>
-  </div>
-  <% end %>
- </div>
+<div class="container vh-100 mb-5 pb-5">
+  <section id="step">
+    <h2><%= @aid.name%></h2>
+      <section class="cat__card">
+        <% @steps.each do |step| %>
+          <%= cl_image_tag step.photo.key, id:"step__img", :crop => "fit"%>
+          <h3>STEP: <%= step.position %></h3>
+          <p><%= step.description %></p>
+          <hr>
+        <% end %>
+      </section>
+  </section>
+</div>

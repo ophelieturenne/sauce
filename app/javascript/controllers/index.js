@@ -13,5 +13,9 @@ application.register("hello", HelloController)
 import MapController from "./map_controller"
 application.register("map", MapController)
 
+
 import QuizController from "./quiz_controller"
 application.register("quiz", QuizController)
+
+import NavController from "./nav_controller"
+application.register("nav", NavController)

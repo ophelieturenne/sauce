@@ -12,12 +12,12 @@ export default class extends Controller {
   }
   disable() {
     if(this.element.innerText == this.ansValue){
-      this.element.style.backgroundColor = "green"
+      this.element.style.backgroundColor = "#16f943"
 
     }
     else {
       this.element.setAttribute("disabled", "")
-      this.element.style.backgroundColor = "red"
+      this.element.style.backgroundColor = "#f91616"
 
     }
   }

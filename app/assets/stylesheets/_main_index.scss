@@ -27,6 +27,8 @@ body {
   background: var(--color-bg);
   color: var(--color-black);
   line-height: 1.7;
+  height: 100%;
+  padding-bottom: 17rem;
 }
 
 /* =================== GENERAL STYLES ========================================== */
@@ -57,15 +59,19 @@ section > h2,section > h3 {
 }
 
 section > h2 {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 }
 
 section > h3 {
   color: rgba(35, 35, 35, 0.832);
-  font-size: 1rem;
+  font-size: 1.7rem;
 }
 
 a {
   text-decoration: none;
   color: var(--color-black);
+}
+
+p {
+  font-size: 1.3rem;
 }

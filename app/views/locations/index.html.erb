@@ -1,9 +1,11 @@
-<h1>Map</h1>
-
-
-<div class="map-container" style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+<div class="container vh-100">
+  <section id="location">
+    <h2>My Location</h2>
+    <div class="map-container" style="width: 100%; height: 600px;"
+      data-controller="map"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </section>
 </div>
 
-<pre id="info"></pre>
+<%# <pre id="info"></pre> %>

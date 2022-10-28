@@ -1,11 +1,10 @@
-<h2>Edit</h2>
-
-<div class="book bg-white shadow" >
-  <%= simple_form_for ([@emergency]) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :phone_number %>
-    <%= f.input :description %>
-  <%= f.submit class: 'btn', style: 'background-color:#28CCED;color:white' %>
-  <% end %>
+<div class="container vh-100">
+  <section id="edit_em">
+    <h2>Edit my contact</h2>
+    <%= simple_form_for ([@emergency]) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :phone_number %>
+      <%= f.submit id: 'btn' %>
+    <% end %>
+  </section>
 </div>
-
