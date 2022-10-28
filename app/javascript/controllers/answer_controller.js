@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import { Popup } from "mapbox-gl"
 
 // Connects to data-controller="answer"
 export default class extends Controller {
@@ -12,13 +13,12 @@ export default class extends Controller {
   disable() {
     if(this.element.innerText == this.ansValue){
       this.element.style.backgroundColor = "green"
+
     }
     else {
       this.element.setAttribute("disabled", "")
       this.element.style.backgroundColor = "red"
 
     }
-
-
   }
 }
