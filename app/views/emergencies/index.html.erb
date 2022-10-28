@@ -23,6 +23,9 @@
               <%# <%= sms_to emergency.phone_number, "Alert", class: "btn-new", body: "I need help" %>
               <%# <%= link_to "Edit",  edit_emergency_path(emergency), class: "btn-new"%>
               <%# <%= link_to "delete", emergency_path(emergency), data: { turbo_method: :delete , turbo_confirm: "Are you sure you want to remove this number"}, class: "btn-new" %>
+              <br>
+              <br>
+
               <%= sms_to emergency.phone_number, class: "icon_e" do %>
                 <i class="fa-solid fa-message"></i>
               <% end %>

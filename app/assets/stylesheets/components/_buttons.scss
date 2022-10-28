@@ -17,13 +17,19 @@
 
 .btn-new{
   border-radius: 20px;
-  font-size: 15px;
+  font-size: 1.1rem;
   line-height: 18px;
   color: var(--color-white);
-  padding: 8px 20px;
+  padding: 8px 50px;
   background: var(--color-primary);
   text-align: center;
   text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.btn-new:hover{
+  color: white;
+  transition: ease(0.4s);
 }
 
 #btn {
@@ -37,4 +43,9 @@
   width: 100%;
   padding: 6px 0px;
   border: 1px solid var(--color-black);
+}
+
+.btn:hover{
+  color: white;
+  transition: ease(0.4s);
 }
